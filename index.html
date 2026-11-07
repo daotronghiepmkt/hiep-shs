@@ -839,10 +839,17 @@ function ago(iso){
   if(s<60)return "vừa xong"; if(s<3600)return Math.floor(s/60)+" phút trước";
   if(s<86400)return Math.floor(s/3600)+" giờ trước"; return Math.floor(s/86400)+" ngày trước";
 }
-document.querySelectorAll(".js-open").forEach(a=>{
-  a.href = CONFIG.OPEN_URL;
-  a.addEventListener("click",()=>{ if(CONFIG.API_URL){ try{fetch(CONFIG.API_URL+"?action=click",{mode:"no-cors",keepalive:true})}catch(e){} } });
-});
+document.querySelectorAll(".js-open").forEach(a=>{a.href=CONFIG.OPEN_URL});
+/* Đếm lượt bấm mở tài khoản: bắt mọi link trỏ tới OPEN_URL (kể cả link sinh sau), cập nhật số ngay trên trang */
+let lastTrack=0;
+function trackOpen(){
+  const now=Date.now();if(now-lastTrack<1500)return;lastTrack=now;
+  const el=$("#sOpenReq");if(el&&el.dataset.v!=null&&el.dataset.v!=="")countUp(el,(parseInt(el.dataset.v,10)||0)+1);
+  if(!CONFIG.API_URL)return;
+  try{fetch(CONFIG.API_URL+"?action=click",{keepalive:true}).then(r=>r.json()).then(s=>{if(s.ok)renderStats(s)}).catch(()=>{})}catch(e){}
+}
+function openAccount(){trackOpen();window.open(CONFIG.OPEN_URL,"_blank","noopener")}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("a");if(a&&a.href&&a.href.indexOf(CONFIG.OPEN_URL)===0)trackOpen()},true);
 
 /* ============ PIXEL ART ============ */
 const PAL={H:"#141414",h:"#3B3B3B",S:"#F2C9A0",s:"#D9A47A",Y:"#C9A227",G:"#1C1C24",L:"#5E6170",M:"#B5654A",
@@ -1318,12 +1325,12 @@ $("#toastX").addEventListener("click",()=>toast.classList.remove("show"));
 const go=id=>()=>document.getElementById(id).scrollIntoView({behavior:"smooth"});
 let exitShown=false;
 document.addEventListener("mouseout",e=>{if(!e.relatedTarget&&e.clientY<8&&!exitShown){exitShown=true;
-  showToast("Khoan đã anh chị ơi!","Anh chị về là rừng thông buồn lắm. 2 phút thôi mà.","Mở tài khoản",()=>window.open(CONFIG.OPEN_URL,"_blank","noopener"))}});
+  showToast("Khoan đã anh chị ơi!","Anh chị về là rừng thông buồn lắm. 2 phút thôi mà.","Mở tài khoản",openAccount)}});
 
 const NUDGES=[
  {ok:()=>!USED.tarot,t:"Lướt nãy giờ chưa bốc bài à?",p:"12 lá Tarot đang úp sẵn, chờ bạn lật. Không mất phí, không mất tài khoản.",cta:"🔮 Bốc 1 lá",act:go("tarot")},
  {ok:()=>!USED.cafe&&isOpen()&&!cafeSaved(),t:"Đọc lâu thế, chắc khát rồi.",p:"Barista Hiệp đang rảnh tay. 10 giây là có ly, kèm luôn lời phán phong cách đầu tư.",cta:"☕ Pha 1 ly",act:go("cafe")},
- {ok:()=>!USED.lead,t:"Bạn ở đây lâu hơn thời gian mở tài khoản rồi đấy.",p:"Mở tài khoản chỉ mất 2 phút. Bạn đã đọc tới phút thứ mấy rồi?",cta:"Mở trong 2 phút",act:()=>window.open(CONFIG.OPEN_URL,"_blank","noopener")},
+ {ok:()=>!USED.lead,t:"Bạn ở đây lâu hơn thời gian mở tài khoản rồi đấy.",p:"Mở tài khoản chỉ mất 2 phút. Bạn đã đọc tới phút thứ mấy rồi?",cta:"Mở trong 2 phút",act:openAccount},
  {ok:()=>!USED.share,t:"Sếp vừa hỏi KPI tới đâu rồi.",p:"Tôi bảo đang có người đọc trang rất chăm. Gửi trang cho 1 người bạn để tôi có thêm chuyện báo cáo nhé.",cta:"📣 Chia sẻ",act:()=>doShare("page")},
  {ok:()=>true,t:"Vẫn còn đây à? Cảm động quá.",p:"Bạn là một trong những người đọc lâu nhất hôm nay (theo cảm nhận cá nhân, không có số liệu).",cta:"Ghé Tường cảm ơn",act:go("wall")}
 ];
