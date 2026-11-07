@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hiệp Tỉa Nến cần 100 tài khoản SHS</title>
+<meta name="description" content="Giúp Hiệp Tỉa Nến mở đủ 100 tài khoản chứng khoán SHS để Sếp ký đơn nghỉ phép đi cắm trại. Mở trong 2 phút, ngay trên điện thoại.">
+<meta property="og:title" content="Hiệp Tỉa Nến cần 100 tài khoản SHS">
+<meta property="og:description" content="Xong KPI, Sếp mới cho đi cắm trại. Mở giúp tôi 1 tài khoản, 2 phút thôi.">
+<meta property="og:image" content="hiep-camping.jpg">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+/* ============ CẤU HÌNH MÀU THEO BRAND SHS ============ */
+:root{
+  --blue:#0A2762; --blue2:#13377F; --orange:#F35700; --yellow:#FFB628;
+  --cream:#FFF6EC; --ink:#0A2762; --muted:#55607A; --line:#0A2762;
+  --green:#14A05A; --red:#E0262B;
+  --px:'Press Start 2P', monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--orange)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.px{font-family:var(--px);letter-spacing:.5px}
+.box{border:3px solid var(--line);box-shadow:5px 5px 0 var(--line);background:#fff;border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:15px;text-decoration:none;cursor:pointer;
+  padding:13px 18px;border:3px solid var(--blue);box-shadow:4px 4px 0 var(--blue);transition:transform .08s,box-shadow .08s;background:#fff;color:var(--blue);font-family:inherit}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--blue)}
+.btn.primary{background:var(--orange);color:#fff}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:4px 4px 0 var(--orange);border-color:var(--blue)}
+section{padding:56px 0}
+h2{font-size:clamp(24px,4.6vw,34px);line-height:1.2;font-weight:900;margin-bottom:10px}
+.kicker{font-family:var(--px);font-size:10px;color:var(--orange);margin-bottom:12px;display:block}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+.note{font-size:12.5px;color:var(--muted)}
+
+/* ============ TOPBAR ============ */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:3px solid var(--blue)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.top img{height:30px;width:auto}
+.top .who{font-size:12px;color:var(--muted);line-height:1.3;margin-left:10px;border-left:2px solid #e3e6ee;padding-left:10px}
+.top .who b{color:var(--blue);display:block;font-size:13px}
+.top .btn{padding:8px 12px;font-size:13px;box-shadow:3px 3px 0 var(--blue)}
+@media(max-width:520px){.top .who{display:none}}
+section[id]{scroll-margin-top:66px}
+.nav{display:none;gap:2px;align-items:center}
+.nav a{font-size:14px;font-weight:700;color:var(--blue);text-decoration:none;padding:8px 10px;border-bottom:3px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--orange)}
+.nav a.on{border-bottom-color:var(--orange);color:var(--orange)}
+.top-right{display:flex;align-items:center;gap:10px}
+.burger{width:42px;height:38px;border:3px solid var(--blue);background:#fff;box-shadow:3px 3px 0 var(--blue);cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:0}
+.burger i{display:block;width:18px;height:3px;background:var(--blue);transition:transform .2s,opacity .2s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:none;position:fixed;left:0;right:0;top:63px;z-index:39;background:#fff;border-bottom:3px solid var(--blue);box-shadow:0 8px 0 rgba(10,39,98,.12);padding:6px 18px 14px;max-height:calc(100vh - 63px);overflow:auto}
+.mnav.show{display:block;animation:deal .25s}
+.mnav a{display:flex;align-items:center;gap:12px;padding:13px 4px;font-weight:800;font-size:16px;color:var(--blue);text-decoration:none;border-bottom:2px dashed #E3E6EE}
+.mnav a:last-child{border-bottom:0}
+.mnav a span{width:26px;text-align:center}
+.mnav a.on{color:var(--orange)}
+@media(min-width:980px){.nav{display:flex}.burger,.mnav{display:none!important}.top .who span{display:none}}
+@media(min-width:980px) and (max-width:1199px){.top .who{display:none}}
+
+/* ============ HERO ============ */
+.hero{background:var(--cream);border-bottom:3px solid var(--blue);padding:36px 0 48px;position:relative;overflow:hidden;
+  background-image:linear-gradient(rgba(10,39,98,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,39,98,.05) 1px,transparent 1px);background-size:24px 24px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.badge{display:inline-block;background:var(--blue);color:#fff;font-family:var(--px);font-size:9px;padding:8px 10px;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.05;font-weight:900;letter-spacing:-1px}
+.hero h1 .o{color:var(--orange)}
+.hero .sub{font-size:clamp(18px,2.6vw,21px);font-weight:700;margin:14px 0 12px}
+.hero p.body{color:var(--muted);font-size:16.5px;max-width:520px}
+.hero p.body b{color:var(--blue)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+@media(max-width:520px){.hero .cta-row{gap:12px}.hero .cta-row .btn.primary{flex:1 1 100%;justify-content:center}.hero .cta-row .half{flex:1 1 0;justify-content:center;padding:12px 6px;font-size:13.5px}}
+.mini-kpi{margin-top:22px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.mini-bar{flex:1;max-width:260px;height:14px;border:2px solid var(--blue);background:#fff;position:relative}
+.mini-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--orange);width:0;transition:width 1.2s}
+
+.stage{position:relative;max-width:470px;width:100%;margin:0 auto}
+.stage svg{width:100%;height:auto;display:block;image-rendering:pixelated}
+#hiep{cursor:pointer;transform-box:fill-box;transform-origin:bottom}
+.idle #hiep{animation:bob 1.6s steps(2) infinite}
+@keyframes bob{50%{transform:translateY(-1px)}}
+.party #hiep{animation:jump .45s steps(3) infinite}
+@keyframes jump{50%{transform:translateY(-4px)}}
+.sweat-drop{opacity:0}
+.sweat .sweat-drop{animation:drip 1.4s steps(4) infinite}
+.sweat .sweat-drop.d2{animation-delay:.7s}
+@keyframes drip{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(5px)}}
+.speech{position:absolute;left:0;top:2%;max-width:52%;background:#fff;border:3px solid var(--blue);box-shadow:3px 3px 0 var(--blue);
+  padding:9px 11px;font-size:13px;font-weight:700;line-height:1.35;min-height:42px}
+.speech:after{content:"";position:absolute;left:22%;bottom:-11px;width:12px;height:12px;background:#fff;border-right:3px solid var(--blue);border-bottom:3px solid var(--blue);transform:rotate(45deg) skew(8deg,8deg)}
+.hint{position:absolute;right:2%;bottom:-6px;font-size:11px;color:var(--muted);font-weight:600}
+.snip{position:absolute;font-family:var(--px);font-size:10px;color:var(--orange);pointer-events:none;animation:snip .9s ease-out forwards}
+@keyframes snip{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-28px)}}
+.confetti{position:absolute;top:-10px;width:8px;height:8px;z-index:5;animation:fall 2.2s linear forwards}
+@keyframes fall{to{transform:translateY(560px) rotate(540deg);opacity:.2}}
+
+/* ============ KPI ============ */
+.kpi{background:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+@media(max-width:760px){.stats{grid-template-columns:1fr;gap:14px}}
+@media(max-width:420px){.stat{padding:14px}.stat .lbl{font-size:13.5px}}
+.stat{padding:18px}
+.stat .num{font-family:var(--px);font-size:clamp(22px,4vw,30px);color:var(--blue);margin:8px 0 6px}
+.stat .lbl{font-weight:700;font-size:14.5px}
+.stat .src{font-size:12px;color:var(--muted);margin-top:4px}
+.goal{padding:22px}
+.goal-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px}
+.goal-head .big{font-family:var(--px);font-size:clamp(20px,4vw,28px);color:var(--orange)}
+.goal-head .big small{font-size:.5em;color:var(--blue)}
+.bar{height:30px;border:3px solid var(--blue);margin:44px 0 8px;position:relative;background:
+  repeating-linear-gradient(90deg,#fff 0 18px,#F2F4F9 18px 20px)}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:repeating-linear-gradient(90deg,var(--orange) 0 10px,#ff7a2e 10px 20px);transition:width 1.4s steps(20)}
+.bar .runner{position:absolute;top:-30px;width:26px;transform:translateX(-50%);transition:left 1.4s steps(20)}
+.milestones{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.ms{font-size:12px;color:var(--muted);border-top:3px solid #DDE2EC;padding-top:8px}
+.ms b{display:block;font-family:var(--px);font-size:9px;color:var(--blue);margin-bottom:4px}
+.ms.done{border-color:var(--orange);color:var(--ink)}
+.ms.done b{color:var(--orange)}
+@media(max-width:700px){.milestones{grid-template-columns:1fr 1fr}}
+.hose{margin-top:18px;padding:14px 16px;background:var(--cream);border-left:6px solid var(--orange);font-size:15px}
+
+/* ============ VÌ SAO ============ */
+.why{background:var(--blue);color:#fff;border-top:3px solid var(--blue)}
+.why h2{color:#fff}.why .lead{color:#C9D3EA}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:26px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;color:var(--ink);border:3px solid #fff;box-shadow:6px 6px 0 var(--orange);padding:20px;display:flex;flex-direction:column}
+.card .tag{font-family:var(--px);font-size:9px;color:#fff;background:var(--orange);align-self:flex-start;padding:6px 8px;margin-bottom:12px}
+.card h3{font-size:21px;font-weight:900;line-height:1.25;margin-bottom:8px}
+.card .joke{font-style:italic;color:var(--orange);font-weight:600;margin-bottom:10px}
+.card ul{list-style:none;font-size:14.5px;color:#2b3550}
+.card li{padding-left:16px;position:relative;margin-bottom:5px}
+.card li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--blue)}
+.card .risk{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);border-top:2px dashed #DDE2EC}
+.card .risk a{font-weight:700}
+
+/* ============ TIN CẬY ============ */
+.aw-title{font-size:21px;font-weight:900;margin:36px 0 4px}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
+@media(max-width:860px){.awards{grid-template-columns:1fr}}
+.award{padding:16px;display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start}
+.trophy svg{width:64px;height:auto;display:block}
+.award:hover .trophy svg{animation:jump .45s steps(3) 2}
+.aw-name{font-weight:900;font-size:15.5px;line-height:1.35;color:var(--blue);text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px}
+.aw-name:hover{color:var(--orange)}
+.aw-cat{font-size:14px;font-weight:600;margin-top:6px}
+.aw-meta{font-size:12px;color:var(--muted);margin-top:4px}
+.trust .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+@media(max-width:760px){.trust .grid{grid-template-columns:1fr}}
+.tbox{padding:20px}
+.tbox .px{font-size:clamp(26px,5vw,38px);color:var(--orange);margin:6px 0 10px}
+.tbox p{font-size:14.5px}
+.tbox .src{font-size:12px;color:var(--muted);margin-top:8px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
+.split div{border:2px solid var(--blue);padding:10px}
+.split b{font-family:var(--px);font-size:18px;color:var(--orange);display:block;margin-top:4px}
+
+/* ============ ẢNH THẬT ============ */
+.proof{background:var(--cream);border-top:3px solid var(--blue);border-bottom:3px solid var(--blue)}
+.proof .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+@media(max-width:760px){.proof .wrap{grid-template-columns:1fr}}
+.polaroid{background:#fff;padding:12px 12px 46px;border:3px solid var(--blue);box-shadow:6px 6px 0 var(--blue);transform:rotate(-2.5deg);width:100%;max-width:340px;margin:0 auto;position:relative}
+.polaroid img{aspect-ratio:3/4;object-fit:cover;width:100%}
+.polaroid span{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-weight:700;font-size:14px}
+.stamp{position:absolute;top:18px;right:-14px;background:var(--orange);color:#fff;font-family:var(--px);font-size:8px;padding:8px;transform:rotate(8deg);border:2px solid var(--blue)}
+
+/* ============ TƯỜNG DANH DỰ ============ */
+.wall-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:24px}
+.fan{padding:14px;font-size:14px}
+.fan .n{font-weight:800;font-size:15.5px}
+.fan .c{font-size:12px;color:var(--muted)}
+.fan .m{margin-top:8px;padding:8px 10px;background:var(--cream);font-style:italic}
+.fan .m.wait{font-style:normal;color:var(--muted);font-size:12.5px;background:#F4F5F9}
+.empty{padding:26px;text-align:center;font-weight:700}
+.empty .px{display:block;font-size:12px;color:var(--orange);margin-bottom:10px}
+
+/* ============ ĐĂNG KÝ ============ */
+.join{background:#fff}
+.join .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;margin-top:24px;align-items:start}
+@media(max-width:860px){.join .grid{grid-template-columns:1fr}}
+.qrbox{padding:20px;text-align:center}
+.qrbox h3,.formbox h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.qrbox img{width:220px;margin:14px auto;border:3px solid var(--blue)}
+.formbox{padding:20px}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+label small{font-weight:500;color:var(--muted)}
+input[type=text],input[type=tel],textarea{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:3px solid var(--blue);border-radius:0;background:#fff;color:var(--ink);outline:none}
+input:focus,textarea:focus{box-shadow:4px 4px 0 var(--orange)}
+textarea{resize:vertical;min-height:70px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pills label{margin:0;font-weight:700;font-size:14px;border:3px solid var(--blue);padding:9px 14px;cursor:pointer;background:#fff;user-select:none}
+.pills input{position:absolute;opacity:0;pointer-events:none}
+.pills label:has(input:checked){background:var(--blue);color:#fff;box-shadow:3px 3px 0 var(--orange)}
+.thanks .inner{text-align:center;max-width:460px;position:relative}
+.thanks svg{width:96px;margin:0 auto 6px;display:block;animation:jump .45s steps(3) infinite}
+.thanks h3{font-size:24px}
+.thanks .quip{font-size:16.5px;font-weight:600;margin:10px 0 14px;color:#2b3550}
+.thanks .alias{background:var(--cream);border:2px dashed var(--orange);padding:10px 12px;font-size:14px;margin-bottom:6px}
+.thanks .alias b{display:block;font-size:17px;color:var(--orange);margin-top:2px}
+.thanks .btns{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.thanks .btns .btn{justify-content:center;margin:0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:14px;margin:12px 0 0;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--orange);flex-shrink:0;margin-top:2px}
+.check a{font-weight:700;cursor:pointer}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.err{color:var(--red);font-size:13px;font-weight:700;margin-top:10px;min-height:18px}
+.formbox .btn{width:100%;justify-content:center;margin-top:14px;font-size:16px}
+.formbox .btn[disabled]{opacity:.6;cursor:wait}
+.ok{display:none;text-align:center;padding:20px 6px}
+.ok .px{color:var(--orange);font-size:14px;display:block;margin-bottom:12px}
+
+/* ============ FAQ ============ */
+.faq details{border:3px solid var(--blue);margin-top:12px;background:#fff}
+.faq summary{padding:14px 16px;font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-family:var(--px);color:var(--orange)}
+.faq details[open] summary:after{content:"−"}
+.faq details p{padding:0 16px 16px;color:#2b3550}
+
+/* ============ FOOTER ============ */
+footer{background:var(--blue);color:#C9D3EA;padding:36px 0 46px;font-size:13px}
+footer b{color:#fff}
+footer a{color:#FFB628}
+footer .disc{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.2);font-size:12px;line-height:1.6}
+
+/* ============ MODAL / TOAST ============ */
+.modal{position:fixed;inset:0;background:rgba(10,39,98,.55);z-index:80;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modal .inner{background:#fff;border:3px solid var(--blue);box-shadow:8px 8px 0 var(--orange);max-width:640px;width:100%;max-height:86vh;overflow:auto;padding:22px}
+.modal h3{font-size:20px;font-weight:900;margin-bottom:4px}
+.modal ol{padding-left:20px;font-size:14px;color:#2b3550}
+.modal li{margin:8px 0}
+.modal .btn{margin-top:16px}
+.fill-me{background:#FFE9A8;padding:0 4px;font-weight:700}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(140%);z-index:70;background:#fff;border:3px solid var(--blue);box-shadow:5px 5px 0 var(--orange);
+  padding:14px 16px;max-width:420px;width:calc(100% - 28px);display:flex;gap:12px;align-items:center;transition:transform .35s}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast b{display:block;margin-bottom:2px}
+.toast p{font-size:13.5px;color:var(--muted)}
+.toast .cta{display:inline-block;margin-top:8px;font-weight:800;font-size:13.5px;color:#fff;background:var(--orange);border:2px solid var(--blue);padding:6px 10px;text-decoration:none;cursor:pointer;font-family:inherit}
+.toast svg{flex-shrink:0;align-self:flex-start}
+.sharebar{background:var(--orange);color:#fff;border-top:3px solid var(--blue);padding:40px 0}
+.sharebar .wrap{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+@media(max-width:640px){.sharebar .wrap{grid-template-columns:1fr;text-align:center}.sharebar svg{margin:0 auto}}
+.sharebar h2{color:#fff;margin-bottom:6px}
+.sharebar p{font-size:16px;color:#FFE6D6}
+.sharebar .cta-row .btn{border-color:var(--blue)}
+.share-mini{margin-top:12px}
+.share-mini .btn{font-size:14px;padding:10px 14px}
+.share-opts{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.share-opts .btn{justify-content:center;margin:0}
+.share-link{width:100%;font:inherit;font-size:13px;padding:9px;border:2px dashed var(--blue);margin-top:10px;color:var(--blue);background:var(--cream)}
+.toast .x{margin-left:auto;cursor:pointer;font-family:var(--px);font-size:12px;border:0;background:none;color:var(--blue);padding:6px}
+.offline{background:#FFE9A8;color:var(--blue);font-size:13px;font-weight:700;text-align:center;padding:8px 12px;display:none}
+/* ============ CAFE ============ */
+.cafe{background:#F3E6D4;border-top:3px solid var(--blue);border-bottom:3px solid var(--blue)}
+.hours{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px;font-size:13.5px;font-weight:700}
+.hours span{background:#fff;border:2px solid var(--blue);padding:5px 9px}
+.hours .open{background:var(--green);color:#fff;border-color:var(--green)}
+.hours .closed{background:var(--red);color:#fff;border-color:var(--red)}
+.menu{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+@media(max-width:760px){.menu{grid-template-columns:repeat(3,1fr);gap:10px}}
+@media(max-width:420px){.menu{grid-template-columns:repeat(2,1fr)}}
+.drink{background:#fff;border:3px solid var(--blue);box-shadow:4px 4px 0 var(--blue);padding:12px 8px;text-align:center;cursor:pointer;font:inherit;color:var(--blue);transition:transform .08s}
+.drink:hover{transform:translateY(-3px)}
+.drink:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--blue)}
+.drink svg{width:56px;height:56px;margin:0 auto 6px;display:block}
+.drink b{display:block;font-size:14px;font-weight:800;line-height:1.25}
+.menu.locked .drink{opacity:.55}
+.brewbox{display:none;margin-top:24px;padding:20px;max-width:640px}
+.brewbox.show{display:block;animation:deal .4s}
+.brew-step{font-weight:700;font-size:16px;min-height:48px;margin:6px 0 12px}
+.brew-bar{height:26px;border:3px solid var(--blue);background:repeating-linear-gradient(90deg,#fff 0 14px,#F2F4F9 14px 16px);position:relative}
+.brew-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:repeating-linear-gradient(90deg,#6B3A1E 0 10px,#8A4F2A 10px 20px)}
+.brew-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px}
+.cupres{display:none;grid-template-columns:200px 1fr;gap:24px;align-items:center;margin-top:24px;max-width:760px;padding:20px}
+.cupres.show{display:grid;animation:deal .5s}
+@media(max-width:640px){.cupres{grid-template-columns:1fr;text-align:center}}
+.cupres svg{width:170px;margin:0 auto;display:block}
+.cupres .style{display:inline-block;background:var(--blue);color:#fff;font-size:12px;font-weight:800;padding:5px 9px;margin:6px 0 8px}
+.cupres .say{font-size:clamp(18px,2.8vw,21px);font-weight:800;font-style:italic;color:#6B3A1E;line-height:1.35;margin-bottom:10px}
+.cafe-note{margin-top:16px;padding:14px 16px;background:#fff;border-left:6px solid #6B3A1E;font-weight:600;display:none}
+.cafe-note.show{display:block}
+.lockbox{color:var(--ink);max-width:760px;border-left-color:var(--orange)}
+.lockbox b{display:block;font-size:17px;margin-bottom:4px}
+.lockbox p{font-weight:500;font-size:15px;color:#2b3550}
+.chip{display:none;align-items:center;gap:8px;background:#F3E6D4;border:2px dashed #6B3A1E;padding:8px 10px;font-size:14px;font-weight:700;margin-top:10px}
+.chip.show{display:flex}
+.chip button{margin-left:auto;background:none;border:0;color:var(--orange);font-weight:800;cursor:pointer;font:inherit;font-size:13px}
+@keyframes steam{0%{opacity:.9;transform:translateY(0)}100%{opacity:0;transform:translateY(-3px)}}
+.steam{animation:steam 1.4s steps(3) infinite}
+
+/* ============ TAROT ============ */
+.tarot{background:#0A2762;color:#fff;border-bottom:3px solid var(--blue);position:relative;overflow:hidden;
+  background-image:radial-gradient(#ffffff22 1px,transparent 1.5px);background-size:22px 22px}
+.tarot h2{color:#fff}.tarot .lead{color:#C9D3EA}
+.tcount{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:14px;font-weight:700}
+.tcount span{border:2px solid #fff;padding:7px 11px}
+.tcount b{font-family:var(--px);font-size:12px;color:#FFB628}
+.tcount .go{background:var(--orange);border-color:var(--orange);animation:nudge 1.6s steps(2) infinite}
+@keyframes nudge{50%{transform:translateY(2px)}}
+.deck{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:26px;max-width:760px}
+@media(max-width:700px){.deck{grid-template-columns:repeat(4,1fr);gap:10px}}
+.tc{aspect-ratio:2/3;perspective:700px;cursor:pointer;animation:deal .5s backwards}
+@keyframes deal{from{opacity:0;transform:translateY(-30px) rotate(-8deg)}}
+.tc .in{position:relative;width:100%;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.tc:hover .in{transform:translateY(-5px)}
+.tc.flip .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:3px solid #fff;box-shadow:3px 3px 0 var(--orange);overflow:hidden}
+.face svg{width:100%;height:100%;display:block}
+.back span{position:absolute;bottom:6%;left:0;right:0;text-align:center;font-weight:900;font-size:clamp(7px,1.4vw,10px);color:#FFB628;letter-spacing:.5px}
+.front{transform:rotateY(180deg);background:var(--cream);color:var(--blue);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px;text-align:center;gap:4px}
+.front svg{width:62%;height:auto}
+.front b{font-size:clamp(9px,1.6vw,12px);line-height:1.2;font-weight:900}
+.front i{font-style:normal;font-family:var(--px);font-size:8px;color:var(--orange)}
+.deck.done .tc:not(.flip){opacity:.22;pointer-events:none}
+.deck.done .tc{cursor:default}
+.reading{display:none;grid-template-columns:240px 1fr;gap:28px;margin-top:30px;align-items:center;max-width:760px;animation:deal .5s}
+.reading.show{display:grid}
+@media(max-width:640px){.reading{grid-template-columns:1fr}}
+.bigcard{background:var(--cream);color:var(--blue);border:4px solid #fff;outline:4px solid var(--orange);aspect-ratio:2/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;text-align:center;max-width:240px;margin:0 auto;width:100%}
+.bigcard i{font-style:normal;font-family:var(--px);font-size:12px;color:var(--orange)}
+.bigcard svg{width:70%;height:auto}
+.bigcard b{font-size:20px;font-weight:900;line-height:1.2}
+.reading .say{font-size:clamp(19px,3vw,23px);font-weight:800;font-style:italic;color:#FFB628;margin:6px 0 14px;line-height:1.35}
+.reading .tip{background:#ffffff14;border-left:5px solid var(--orange);padding:12px 14px;font-size:15px}
+.reading .tip b{color:#fff}
+.reading .cta-row .btn{box-shadow:4px 4px 0 var(--orange);border-color:#fff}
+.tarot .disc{font-size:12px;color:#9FB0D6;margin-top:22px}
+.rare{animation:glow 1.2s steps(2) infinite}
+@keyframes glow{50%{outline-color:#FFB628}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="offline" id="offline">Trang đang chạy chế độ xem thử: chưa nối API Google Sheet nên số liệu chưa hiện và form chưa gửi được.</div>
+
+<header class="top">
+  <div class="wrap">
+    <div style="display:flex;align-items:center">
+      <img src="logo.png" alt="SHS">
+      <div class="who"><b>Hiệp Tỉa Nến · Head of Marcom</b><span>Trang cá nhân, không phải kênh chính thức của SHS</span></div>
+    </div>
+    <nav class="nav" aria-label="Điều hướng">
+      <a href="#tarot">Bốc Tarot</a>
+      <a href="#cafe">Cà phê</a>
+      <a href="#kpi">KPI của tôi</a>
+      <a href="#why">Ưu đãi</a>
+      <a href="#wall">Tường cảm ơn</a>
+      <a href="#faq">Hỏi đáp</a>
+    </nav>
+    <div class="top-right">
+      <a class="btn primary js-open" href="#" target="_blank" rel="noopener">Mở tài khoản</a>
+      <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu">
+  <a href="#tarot"><span>🔮</span>Bốc 1 lá Tarot</a>
+  <a href="#cafe"><span>☕</span>Uống 1 ly tôi pha</a>
+  <a href="#kpi"><span>📊</span>KPI của tôi</a>
+  <a href="#why"><span>🎁</span>Ưu đãi khi mở tài khoản</a>
+  <a href="#wall"><span>🌲</span>Tường cảm ơn</a>
+  <a href="#join"><span>✍️</span>Để lại thông tin</a>
+  <a href="#faq"><span>💬</span>Hỏi đáp</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">LV.1 · NHIỆM VỤ ĐẦU TIÊN: 100 TÀI KHOẢN</span>
+      <h1>Tôi là Hiệp<br><span class="o">Tỉa Nến.</span></h1>
+      <p class="sub">Tỉa nến thì tôi quen tay. Tỉa KPI thì tôi cần anh chị.</p>
+      <p class="body">Nhiệm vụ đầu tiên của tôi: <b>100 tài khoản chứng khoán SHS</b>, góp một viên gạch để SHS vào Top 10 thị phần môi giới sàn HOSE. Đủ KPI, Sếp mới ký đơn nghỉ phép cho tôi xách lều vào rừng thông.</p>
+      <div class="cta-row">
+        <a class="btn primary js-open" href="#" target="_blank" rel="noopener">⛺ Mở tài khoản cứu tôi</a>
+        <a class="btn half" href="#tarot">🔮 Bốc 1 lá Tarot</a>
+        <a class="btn half" href="#cafe">☕ Uống 1 ly tôi pha</a>
+      </div>
+      <div class="mini-kpi">
+        <span class="px" style="font-size:9px;color:var(--blue)">KPI</span>
+        <div class="mini-bar"><i id="miniFill"></i></div>
+        <span id="miniTxt" class="px" style="font-size:9px">…/100</span>
+      </div>
+    </div>
+
+    <div class="stage idle" id="stage">
+      <div class="speech" id="speech">Mở giúp tôi 1 tài khoản thôi.</div>
+      <svg id="scene" viewBox="0 0 64 62" shape-rendering="crispEdges" aria-label="Hiệp phiên bản pixel đứng cạnh biểu đồ nến, mơ về chuyến cắm trại"></svg>
+      <div class="hint">👆 Bấm vào tôi để xem tôi tỉa nến</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TAROT (không dùng logo SHS) ============ -->
+<section class="tarot" id="tarot">
+  <div class="wrap">
+    <span class="kicker">BÓI VUI · ĐỪNG TIN</span>
+    <h2>Bốc 1 lá, xem mình là nhà đầu tư kiểu gì</h2>
+    <p class="lead">12 lá bài pixel, bốc bao nhiêu lần cũng được. Lá bài đoán tính cách của anh chị, không đoán giá cổ phiếu. Nghe đồn có 1 lá ẩn rất hiếm.</p>
+    <div class="tcount"><span>🔮 Đã có <b id="sDraws">…</b> lượt bốc bài</span><span id="tLeft">🎴 Còn 5/5 lượt hôm nay</span><span class="go">Đến lượt bạn: chọn 1 lá bên dưới 👇</span></div>
+    <div class="deck" id="deck"></div>
+    <div class="cafe-note lockbox" id="tLock"></div>
+    <div class="reading" id="reading">
+      <div class="bigcard" id="bigCard"></div>
+      <div>
+        <span class="kicker" id="rKicker">LÁ BÀI CỦA BẠN HÔM NAY</span>
+        <h2 id="rName" style="margin-bottom:0"></h2>
+        <p class="say" id="rSay"></p>
+        <p class="tip"><b>Lời khuyên thật:</b> <span id="rTip"></span></p>
+        <div class="cta-row">
+          <button class="btn primary" id="saveCard">📸 Lưu lá bài</button>
+          <button class="btn" id="redraw">🔄 Bốc lại</button>
+          <button class="btn js-share" data-ctx="tarot">😄 Thấy vui? Chia sẻ</button>
+          <a class="btn blue js-open" href="#" target="_blank" rel="noopener">Mở tài khoản</a>
+        </div>
+        <p class="note" style="color:#9FB0D6;margin-top:12px" id="rNext">Chưa ưng lá này? Bốc lại. Khách vãng lai được 5 lá/ngày, để lại thông tin là bốc vô tận.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KPI ============ -->
+<section class="kpi" id="kpi">
+  <div class="wrap">
+    <span class="kicker">BẢNG MINH BẠCH</span>
+    <h2>Đơn nghỉ phép của tôi đang ở đâu?</h2>
+    <p class="lead">Số trên trang là số thật, đếm tự động từ Google Sheet. Bắt đầu từ 0, tôi không độn.</p>
+
+    <div class="stats">
+      <div class="stat box"><div class="lbl">👀 Lượt ghé thăm</div><div class="num" id="sVisits">…</div><div class="src">Đếm mọi lượt mở trang</div></div>
+      <div class="stat box"><div class="lbl">✍️ Người để lại thông tin</div><div class="num" id="sLeads">…</div><div class="src">Đếm từ form bên dưới</div></div>
+      <div class="stat box"><div class="lbl">🙋 Yêu cầu mở tài khoản</div><div class="num" id="sOpenReq">…</div><div class="src">Form chọn "muốn mở" + lượt bấm link mở tài khoản</div></div>
+    </div>
+
+    <div class="goal box">
+      <div class="goal-head">
+        <div><div class="lbl" style="font-weight:800">Tiến độ KPI: tài khoản đã mở qua link của tôi</div>
+          <div class="note" id="openedNote">Tôi cập nhật tay từ báo cáo của SHS.</div></div>
+        <div class="big"><span id="sOpened">…</span><small> / <span id="sTarget">100</span></small></div>
+      </div>
+      <div class="bar"><div class="fill" id="barFill"></div><svg class="runner" id="runner" viewBox="0 0 10 16" shape-rendering="crispEdges" style="left:0"></svg></div>
+      <div class="milestones" id="milestones"></div>
+    </div>
+
+    <div class="hose">📌 Quý III/2026, SHS đã vào <b>Top 10 thị phần môi giới cả HNX lẫn UPCoM</b>. Sàn HOSE thì tôi đang góp từng tài khoản một.</div>
+  </div>
+</section>
+
+<!-- ============ VÌ SAO NÊN MỞ ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="kicker">VÌ SAO NÊN MỞ, NÓI THẬT LÒNG</span>
+    <h2>Tôi không xin không. Có quà đây.</h2>
+    <p class="lead">Thông tin lấy nguyên từ website SHS. Điều kiện ghi đủ, tôi không giấu chữ nhỏ.</p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="tag">MARGIN S-ZERO</span>
+        <h3>Lãi vay margin 0đ cho 100 triệu đầu</h3>
+        <p class="joke">"Lãi 0 đồng thật. Tôi đọc thể lệ 3 lần rồi."</p>
+        <ul>
+          <li>0%/năm cho dư nợ margin đến 100 triệu đồng, tối đa 180 ngày từ ngày mở tài khoản thành công.</li>
+          <li>Dành cho khách hàng cá nhân trong nước mở mới tài khoản từ 06/11/2026 đến hết 28/02/2027 (hoặc kích hoạt lại theo điều kiện chương trình).</li>
+          <li>Phần dư nợ vượt 100 triệu tính 12%/năm. Tự động áp dụng trên Tiểu khoản 01.</li>
+        </ul>
+        <p class="risk"><a href="https://www.shs.com.vn/tin-tuc/shs-ra-mat-margin-s-zero-lai-vay-0-dong-mo-dong-thinh-vuong" target="_blank" rel="noopener">Đọc thể lệ đầy đủ</a></p>
+      </article>
+
+      <article class="card">
+        <span class="tag">2 PHÚT</span>
+        <h3>Mở tài khoản ngay trên điện thoại</h3>
+        <p class="joke">"Nhanh hơn tôi pha xong một ấm cà phê ở rừng thông."</p>
+        <ul>
+          <li>Mở 100% online qua app SH Smart hoặc trang eKYC của SHS.</li>
+          <li>Xác thực eKYC bằng quét chip CCCD, gần như không phải gõ tay.</li>
+          <li>Không cần ra quầy giao dịch.</li>
+        </ul>
+        <p class="risk"><a href="https://www.shs.com.vn/tin-tuc/chi-2-phut-mo-tai-khoan-shs-san-sang-cho-hanh-trinh-dau-tu" target="_blank" rel="noopener">Xem video hướng dẫn 5 bước</a></p>
+      </article>
+
+      <article class="card">
+        <span class="tag">sMARGIN</span>
+        <h3>5 gói vay ký quỹ, gói nào cũng có người hợp</h3>
+        <p class="joke">"Lướt sóng, ôm dài hạn hay mới tập, đều có gói hợp vía."</p>
+        <ul>
+          <li>S-Prime / S-Flexi: cho nhà đầu tư NAV lớn.</li>
+          <li>S-Turbo / Margin S30: cho người giao dịch thường xuyên.</li>
+          <li>Margin T+: lãi suất từ 0%, cho giao dịch ngắn hạn, trong phiên.</li>
+          <li>Margin Elite cho đầu tư giá trị · Margin Standard cho nhu cầu cơ bản.</li>
+        </ul>
+        <p class="risk"><a href="https://www.shs.com.vn/tin-tuc/tan-dung-nhip-dieu-chinh-co-ngay-smargin-he-giai-phap-vay-ky-quy-may-do-cho-moi-phong-cach-dau-tu" target="_blank" rel="noopener">Chi tiết sMargin</a></p>
+      </article>
+
+      <article class="card">
+        <span class="tag">sPARTNER</span>
+        <h3>Mở xong, làm đồng nghiệp bán thời gian của tôi</h3>
+        <p class="joke">"Rồi đến lượt anh chị đi xin Sếp nghỉ phép."</p>
+        <ul>
+          <li>Giới thiệu khách hàng cho SHS, phí hợp tác lên tới 68% theo chính sách áp dụng.</li>
+          <li>Chi trả theo kết quả kinh doanh thực tế.</li>
+          <li>Đăng ký online qua SH Advisor, có mã QR và link giới thiệu riêng.</li>
+        </ul>
+        <p class="risk"><a href="https://www.shs.com.vn/tin-tuc/spartner-phat-trien-kinh-doanh-cung-shs-phi-hop-tac-len-toi-68percent" target="_blank" rel="noopener">Chi tiết sPartner</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIN CẬY ============ -->
+<section class="trust">
+  <div class="wrap">
+    <span class="kicker">SHS CÓ ĐÁNG TIN KHÔNG?</span>
+    <h2>Dân marketing khen thì phải có số. Số đây.</h2>
+    <div class="grid">
+      <div class="tbox box">
+        <div class="lbl" style="font-weight:800">Xếp hạng tín nhiệm VIS Rating</div>
+        <div class="px" style="font-family:Inter,Arial,sans-serif;font-weight:900">A · Ổn định</div>
+        <p>Năm thứ hai liên tiếp. VIS Rating duy trì mức A, triển vọng Ổn định cho SHS ngày 02/10/2026.</p>
+        <p class="src">Nguồn: <a href="https://www.shs.com.vn/tin-tuc/shs-nam-thu-hai-lien-tiep-duoc-vis-rating-xep-hang-a-cung-co-nen-tang-tang-truong" target="_blank" rel="noopener">shs.com.vn</a></p>
+      </div>
+      <div class="tbox box">
+        <div class="lbl" style="font-weight:800">Thị phần môi giới quý III/2026</div>
+        <div class="split">
+          <div>HNX · Top 10<b>2,60%</b></div>
+          <div>UPCoM · Top 10<b>3,62%</b></div>
+        </div>
+        <p>Công cụ nợ: Top 5 thành viên, tỷ trọng trên 10%.</p>
+        <p class="src">Nguồn: công bố của HNX, đăng lại trên <a href="https://www.shs.com.vn/tin-tuc/shs-vuon-len-top-10-thi-phan-moi-gioi-tren-ca-2-san-hnx-upcom-quy-iii2026" target="_blank" rel="noopener">shs.com.vn</a></p>
+      </div>
+    </div>
+
+    <h3 class="aw-title">🏆 Giải thưởng & danh hiệu 2026</h3>
+    <p class="note" style="font-size:14.5px">Tôi chăm chỉ đi xin KPI, còn công ty tôi thì chăm chỉ đi nhận giải. Bấm tên giải để đọc chi tiết.</p>
+    <div class="awards">
+      <div class="award box">
+        <div class="trophy" data-c="#FFB628"></div>
+        <div>
+          <a class="aw-name" href="https://www.shs.com.vn/tin-tuc/shs-vinh-du-nhan-giai-asian-banking-and-finance-awards-2026-khang-dinh-dau-an-investment-banking" target="_blank" rel="noopener">Asian Banking & Finance – Corporate & Investment Banking Awards 2026</a>
+          <p class="aw-cat">Hạng mục: Equity Deal of the Year – Vietnam</p>
+          <p class="aw-meta">Asian Banking & Finance (Charlton Media Group) · Singapore, 02/07/2026</p>
+        </div>
+      </div>
+      <div class="award box">
+        <div class="trophy" data-c="#FFB628"></div>
+        <div>
+          <a class="aw-name" href="https://www.shs.com.vn/tin-tuc/shs-ba-nam-lien-tiep-duoc-vinh-danh-noi-lam-viec-tot-nhat-chau-a-con-nguoi-la-nen-tang-cua-chien-luoc-phat-trien-ben-vung" target="_blank" rel="noopener">HR Asia Best Companies to Work for in Asia 2026</a>
+          <p class="aw-cat">Nơi làm việc tốt nhất châu Á, năm thứ 3 liên tiếp</p>
+          <p class="aw-meta">HR Asia · 2026</p>
+        </div>
+      </div>
+      <div class="award box">
+        <div class="trophy" data-c="#FFB628"></div>
+        <div>
+          <a class="aw-name" href="https://www.shs.com.vn/tin-tuc/shs-duoc-vinh-danh-top-10-doanh-nghiep-doi-moi-sang-tao-va-kinh-doanh-hieu-qua-2026-buoc-tien-cua-chien-luoc-chuyen-doi-toan-dien" target="_blank" rel="noopener">Top 10 Doanh nghiệp Đổi mới Sáng tạo và Kinh doanh Hiệu quả 2026 (VIE10)</a>
+          <p class="aw-cat">Lĩnh vực Tài chính – Chứng khoán</p>
+          <p class="aw-meta">Viet Research & Báo Tài chính – Đầu tư · 26/06/2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ẢNH THẬT ============ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="polaroid">
+      <img src="hiep-camping.jpg" alt="Hiệp ngồi ghế dã ngoại trong rừng thông" width="600" height="800">
+      <span>Lần nghỉ phép gần nhất ⛺</span>
+      <div class="stamp">ẢNH THẬT</div>
+    </div>
+    <div>
+      <span class="kicker">BẰNG CHỨNG TÔI CÓ TỒN TẠI</span>
+      <h2>Đây là tôi, khi KPI đã xong.</h2>
+      <p class="lead" style="margin-bottom:12px">Kính râm, ghế xếp, ấm cà phê pha tay, loa nghe nhạc. Cái ghế đó vẫn đang chờ tôi quay lại.</p>
+      <p class="lead">Ngoài giờ tỉa nến, tôi là Head of Marcom tại SHS. Mỗi tài khoản anh chị mở là một cây thông tôi được ngồi dưới.</p>
+      <div class="cta-row"><a class="btn blue js-open" href="#" target="_blank" rel="noopener">Đưa tôi về rừng thông</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUẦY CÀ PHÊ ============ -->
+<section class="cafe" id="cafe">
+  <div class="wrap">
+    <span class="kicker">QUẦY CÀ PHÊ CỦA HIỆP</span>
+    <h2>Chọn 1 ly, tôi pha. Ly bạn chọn nói lên cách bạn đầu tư.</h2>
+    <p class="lead">Pha cà phê là sở thích, không phải nghề chính. Barista nghiệp dư nên chỉ đứng quầy theo giờ.</p>
+    <div class="hours"><span id="cafeStatus">…</span><span>🕘 9:00 – 17:00 mỗi ngày</span><span>☕ 1 ly/người/ngày</span><span id="cafeCount">Đã pha: … ly</span></div>
+    <div class="menu" id="menu"></div>
+    <div class="cafe-note" id="cafeNote"></div>
+    <div class="brewbox box" id="brewBox">
+      <div class="lbl" style="font-weight:800">Đang pha: <span id="brewName"></span></div>
+      <div class="brew-step" id="brewStep"></div>
+      <div class="brew-bar"><i id="brewFill"></i></div>
+      <div class="brew-meta"><span id="brewIdx"></span><span id="brewPct">0%</span></div>
+    </div>
+    <div class="cupres box" id="cupRes">
+      <div id="cupArt"></div>
+      <div>
+        <span class="kicker" style="margin-bottom:4px">LY CỦA BẠN ĐÃ XONG</span>
+        <h3 style="font-size:24px;font-weight:900" id="cupName"></h3>
+        <span class="style" id="cupStyle"></span>
+        <p class="say" id="cupSay"></p>
+        <div class="cta-row" style="margin-top:12px">
+          <button class="btn primary" id="cupReg">☕ Đăng ký ly này, gặp nhau tôi pha</button>
+          <a class="btn js-open" href="#" target="_blank" rel="noopener">Mở tài khoản</a>
+          <button class="btn js-share" data-ctx="cafe">😄 Thấy vui? Chia sẻ</button>
+        </div>
+        <p class="note" id="cupNext" style="margin-top:10px">Barista nghiệp dư cần nghỉ tay. Mỗi người 1 ly/ngày, mai quay lại nhé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TƯỜNG DANH DỰ ============ -->
+<section class="wall" id="wall">
+  <div class="wrap">
+    <span class="kicker">TƯỜNG CẢM ƠN</span>
+    <h2>Những người đã thương tôi</h2>
+    <p class="lead">Mỗi cái tên ở đây là một cây thông trong khu rừng nghỉ phép của tôi.</p>
+    <div class="wall-list" id="wallList">
+      <div class="empty box"><span class="px">ĐANG TẢI…</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ĐĂNG KÝ ============ -->
+<section class="join" id="join">
+  <div class="wrap">
+    <span class="kicker">CHỌN 1 TRONG 2 CÁCH</span>
+    <h2>Giúp tôi ngay, mất 2 phút</h2>
+    <div class="grid">
+      <div class="qrbox box">
+        <h3>Cách 1: Tự mở luôn</h3>
+        <p class="note">Quét mã bằng camera điện thoại. QR không cắn đâu.</p>
+        <img src="qr.png" alt="Mã QR mở tài khoản SHS của Hiệp">
+        <a class="btn primary js-open" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center">Mở tài khoản SHS</a>
+        <p class="note" style="margin-top:10px">Mở trên kênh chính thức của SHS. Trang này không thu CCCD.</p>
+      </div>
+
+      <div class="formbox box">
+        <form id="leadForm" novalidate>
+          <h3>Cách 2: Để lại thông tin, tôi gọi lại</h3>
+          <p class="note">Tôi hoặc chuyên viên tư vấn của SHS sẽ liên hệ hỗ trợ anh chị.</p>
+          <p class="note" style="color:var(--orange);font-weight:700;margin-top:4px">🎁 Gửi xong là mở khóa Tarot vô tận và cà phê không giới hạn.</p>
+
+          <div class="chip" id="coffeeChip">☕ <span id="coffeeChipTxt"></span><button type="button" id="coffeeChipX">Bỏ chọn</button></div>
+          <label for="fName">Họ và tên</label>
+          <input type="text" id="fName" maxlength="60" autocomplete="name" placeholder="Nguyễn Văn An" required>
+
+          <label>Giới tính</label>
+          <div class="pills" role="radiogroup">
+            <label><input type="radio" name="fGender" value="Nam"> Nam</label>
+            <label><input type="radio" name="fGender" value="Nữ"> Nữ</label>
+            <label><input type="radio" name="fGender" value="Khác" checked> Không muốn nói</label>
+          </div>
+
+          <div class="row2">
+            <div>
+              <label for="fPhone">Số điện thoại <small>(giấu hoàn toàn)</small></label>
+              <input type="tel" id="fPhone" maxlength="15" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required>
+            </div>
+            <div>
+              <label for="fCity">Tỉnh/Thành phố</label>
+              <input type="text" id="fCity" maxlength="40" placeholder="Hà Nội">
+            </div>
+          </div>
+
+          <label for="fMsg">Lời nhắn cho tôi <small>(chỉ mình tôi đọc, không bắt buộc)</small></label>
+          <textarea id="fMsg" maxlength="140" placeholder="Mở cho anh Hiệp đỡ buồn"></textarea>
+
+          <input type="text" id="fWeb" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <label class="check"><input type="checkbox" id="fWant" checked> Tôi muốn được hỗ trợ mở tài khoản chứng khoán SHS</label>
+          <label class="check"><input type="checkbox" id="fShow" checked> <span>Cho hiện tên viết tắt trên Tường cảm ơn <small style="color:var(--muted);font-weight:500">(bỏ chọn thì tôi đặt cho anh chị một biệt danh bí ẩn)</small></span></label>
+          <label class="check"><input type="checkbox" id="fConsent"> <span>Tôi đã đọc và đồng ý với <a id="openTerms">Điều khoản & Chính sách dữ liệu</a></span></label>
+
+          <div class="err" id="fErr"></div>
+          <button class="btn primary" type="submit" id="fBtn">Gửi cho Hiệp ⛺</button>
+        </form>
+        <div class="ok" id="okBox">
+          <span class="px">+1 CÂY THÔNG!</span>
+          <h3 id="okTitle">Tôi nhận được rồi!</h3>
+          <p class="note" id="okMsg">Tôi sẽ liên hệ sớm. Trong lúc chờ, anh chị có thể tự mở luôn bằng mã QR bên cạnh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq" style="background:var(--cream);border-top:3px solid var(--blue)">
+  <div class="wrap" style="max-width:820px">
+    <span class="kicker">HỎI NHANH ĐÁP GỌN</span>
+    <h2>Câu hỏi hay gặp</h2>
+    <details><summary>Hiệp Tỉa Nến là ai?</summary><p>Tôi là Đào Trọng Hiệp, Head of Marcom tại Chứng khoán SHS. "Tỉa nến" là biệt danh, không phải dịch vụ. Tôi không tư vấn mua bán mã nào trên trang này.</p></details>
+    <details><summary>Mở tài khoản có tốn nhiều công không?</summary><p>Khoảng 2 phút trên điện thoại và một chút lòng tin. Biểu phí giao dịch anh chị xem trên website SHS hoặc hỏi tổng đài 1900 638 588.</p></details>
+    <details><summary>Hiệp có hứa anh chị giàu không?</summary><p>Không dám. Đầu tư chứng khoán có lãi có lỗ, và thua lỗ thì không đổ cho nhân vật pixel được. Tôi chỉ hứa có người hỗ trợ tận tâm.</p></details>
+    <details><summary>Số liệu trên trang có thật không?</summary><p>Thật. Lượt ghé, số người để lại thông tin và lượt bấm link đều đếm tự động. Số tài khoản đã mở tôi cập nhật tay từ báo cáo, có ghi ngày cập nhật.</p></details>
+    <details><summary>Số điện thoại của tôi có bị lộ không?</summary><p>Không. Số điện thoại chỉ nằm trong file quản lý của tôi để liên hệ và chuyển cho SHS. Nó không xuất hiện trên trang, kể cả trong dữ liệu mà trình duyệt tải về.</p></details>
+    <details><summary>Tôi muốn xóa thông tin đã gửi?</summary><p>Anh chị nhắn tôi theo thông tin liên hệ trong mục Điều khoản, tôi xóa ngay.</p></details>
+  </div>
+</section>
+
+<section class="sharebar" id="share">
+  <div class="wrap">
+    <svg id="shareFace" viewBox="0 0 20 14" width="110" shape-rendering="crispEdges"></svg>
+    <div>
+      <h2>Thấy Hiệp hóm hỉnh? Rủ thêm người giúp tôi nhé.</h2>
+      <p>Mỗi lượt chia sẻ là thêm một người có thể giúp tôi về đích KPI và xách lều vào rừng thông. Đã có <b id="sShares">…</b> lượt chia sẻ.</p>
+      <div class="cta-row">
+        <button class="btn blue js-share" data-ctx="page">📣 Chia sẻ cho bạn bè</button>
+        <a class="btn js-open" href="#" target="_blank" rel="noopener">Hoặc mở tài khoản luôn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Hiệp Tỉa Nến</b> · Trang cá nhân của Đào Trọng Hiệp, CBNV Công ty CP Chứng khoán Sài Gòn – Hà Nội (SHS). Đây không phải website chính thức của SHS.</p>
+    <p style="margin-top:6px">Website SHS: <a href="https://www.shs.com.vn" target="_blank" rel="noopener">www.shs.com.vn</a> · Tổng đài: 1900 638 588 · hotrokhachhang@shs.com.vn</p>
+  </div>
+</footer>
+
+<!-- ============ MODAL ĐIỀU KHOẢN ============ -->
+<div class="modal" id="terms" role="dialog" aria-modal="true" aria-labelledby="tTitle">
+  <div class="inner">
+    <h3 id="tTitle">Điều khoản & Chính sách dữ liệu</h3>
+    <p class="note">Phiên bản <span id="tVer"></span></p>
+    <ol>
+      <li><b>Về trang này.</b> Đây là trang cá nhân của Đào Trọng Hiệp, CBNV Công ty CP Chứng khoán Sài Gòn – Hà Nội (SHS), không phải kênh chính thức của SHS.</li>
+      <li><b>Dữ liệu thu thập.</b> Họ tên, số điện thoại, tỉnh/thành và lời nhắn (nếu có) do bạn tự cung cấp. Trang không thu CCCD, thông tin tài khoản ngân hàng hay mật khẩu.</li>
+      <li><b>Mục đích.</b> Liên hệ hỗ trợ bạn mở tài khoản chứng khoán và giới thiệu sản phẩm, dịch vụ của SHS. Không dùng cho mục đích khác.</li>
+      <li><b>Chia sẻ.</b> Thông tin được chuyển cho SHS (bộ phận tư vấn, chăm sóc khách hàng) để liên hệ bạn. Không bán hay chia sẻ cho bên thứ ba khác.</li>
+      <li><b>Hiển thị công khai.</b> Nếu bạn đồng ý, Tường cảm ơn hiện tên viết tắt kèm danh xưng (ví dụ "Anh An N.") và tỉnh/thành. Nếu không, trang hiện một biệt danh ẩn danh ngẫu nhiên. Số điện thoại và lời nhắn không bao giờ hiển thị.</li>
+      <li><b>Lưu trữ.</b> Dữ liệu lưu trên Google Sheet do Hiệp quản lý, tối đa <span class="fill-me" id="tKeep"></span> hoặc đến khi bạn yêu cầu xóa.</li>
+      <li><b>Quyền của bạn.</b> Bạn có quyền xem, sửa, rút lại sự đồng ý và yêu cầu xóa dữ liệu bất kỳ lúc nào, qua: <span class="fill-me" id="tContact"></span>.</li>
+      <li><b>Mở tài khoản.</b> Việc mở tài khoản thực hiện trên kênh chính thức của SHS (SH Smart / eKYC) và theo điều khoản của SHS.</li>
+      <li><b>Không phải khuyến nghị.</b> Nội dung trên trang chỉ mang tính tham khảo, không phải khuyến nghị đầu tư.</li>
+    </ol>
+    <button class="btn primary" id="acceptTerms">Tôi đồng ý</button>
+    <button class="btn" id="closeTerms" style="margin-left:8px">Đóng</button>
+  </div>
+</div>
+
+<div class="modal thanks" id="thanks" role="dialog" aria-modal="true" aria-labelledby="thTitle">
+  <div class="inner">
+    <svg id="thFace" viewBox="0 0 20 14" shape-rendering="crispEdges"></svg>
+    <span class="kicker" style="margin-bottom:6px">+1 CÂY THÔNG</span>
+    <h3 id="thTitle">Cảm ơn anh chị!</h3>
+    <p class="quip" id="thQuip"></p>
+    <div class="alias"><span id="thAliasLbl">Trên Tường cảm ơn, bạn là:</span><b id="thAlias"></b></div>
+    <p class="note" style="color:var(--orange);font-weight:800;margin-bottom:6px">🔓 Đã mở khóa: Tarot vô tận + cà phê không giới hạn</p>
+    <p class="note" id="thNote">Tôi hoặc chuyên viên SHS sẽ gọi lại sớm. Muốn nhanh hơn thì mở luôn, 2 phút là xong.</p>
+    <div class="btns">
+      <a class="btn primary js-open" href="#" target="_blank" rel="noopener">⛺ Mở luôn trong 2 phút</a>
+      <a class="btn" href="#tarot" id="thTarot">🔮 Bốc 1 lá Tarot trong lúc chờ</a>
+      <button class="btn" id="thClose" style="box-shadow:none;border-color:transparent;text-decoration:underline">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shTitle">
+  <div class="inner" style="max-width:420px;text-align:center">
+    <h3 id="shTitle">Chia sẻ giúp Hiệp</h3>
+    <p class="note" id="shText"></p>
+    <div class="share-opts">
+      <a class="btn primary" id="shFb" href="#" target="_blank" rel="noopener">Chia sẻ lên Facebook</a>
+      <button class="btn" id="shCopy">📋 Sao chép link (dán vào Zalo, Messenger…)</button>
+    </div>
+    <input class="share-link" id="shLink" readonly>
+    <button class="btn" id="shClose" style="margin-top:12px;box-shadow:none;border-color:transparent;text-decoration:underline">Đóng</button>
+  </div>
+</div>
+
+<div class="modal" id="saveModal" role="dialog" aria-modal="true">
+  <div class="inner" style="text-align:center;max-width:420px">
+    <h3>Lá bài của bạn</h3>
+    <img id="saveImg" alt="Lá bài Tarot của bạn" style="max-height:58vh;margin:12px auto;border:3px solid var(--blue)">
+    <p class="note">Trên điện thoại: nhấn giữ vào ảnh để lưu hoặc chia sẻ.</p>
+    <a class="btn primary" id="saveDl" download="la-bai-hiep-tia-nen.png" href="#">Tải ảnh</a>
+    <button class="btn" id="saveClose" style="margin-left:8px">Đóng</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status">
+  <svg viewBox="0 0 20 14" width="54" shape-rendering="crispEdges" id="toastFace"></svg>
+  <div><b id="toastT">Khoan đã anh chị ơi!</b><p id="toastP">Anh chị về là rừng thông buồn lắm. 2 phút thôi mà.</p><a class="cta" id="toastCta" href="#" style="display:none"></a></div>
+  <button class="x" id="toastX" aria-label="Đóng">X</button>
+</div>
+
+<script>
+/* =========================================================
+   CẤU HÌNH: Hiệp chỉ cần sửa khối này
+   ========================================================= */
+const CONFIG = {
+  API_URL: "https://script.google.com/macros/s/AKfycbwvdlks5-wjlKFrIYh9MrCqgjjGCWuxJOn19GwKtkQTb--cQOzHK5-sIbm8qfdf16yK/exec",                                   // dán URL Web App của Apps Script (kết thúc bằng /exec)
+  OPEN_URL: "https://q.me-qr.com/l/SHS-Hiepdt",  // link mở tài khoản
+  TARGET: 100,                                   // KPI, Sheet Config sẽ ghi đè nếu có
+  TERMS_VERSION: "v1 · 07/11/2026",
+  KEEP_DATA: "12 tháng",
+  CONTACT: "daotronghiep@gmail.com"
+};
+
+const USED={tarot:false,cafe:false,lead:false,share:false};
+/* ============ TIỆN ÍCH ============ */
+const $ = s => document.querySelector(s);
+const fmt = n => (n==null||isNaN(n)) ? "—" : Number(n).toLocaleString("vi-VN");
+function countUp(el, to){
+  if(to==null||isNaN(to)){el.textContent="—";return}
+  const from = parseInt((el.dataset.v||"0"),10)||0, t0=performance.now(), d=900;
+  el.dataset.v = to;
+  (function step(t){const k=Math.min((t-t0)/d,1);el.textContent=fmt(Math.round(from+(to-from)*k));if(k<1)requestAnimationFrame(step)})(t0);
+}
+function ago(iso){
+  const s=(Date.now()-new Date(iso).getTime())/1000;
+  if(isNaN(s))return "";
+  if(s<60)return "vừa xong"; if(s<3600)return Math.floor(s/60)+" phút trước";
+  if(s<86400)return Math.floor(s/3600)+" giờ trước"; return Math.floor(s/86400)+" ngày trước";
+}
+document.querySelectorAll(".js-open").forEach(a=>{
+  a.href = CONFIG.OPEN_URL;
+  a.addEventListener("click",()=>{ if(CONFIG.API_URL){ try{fetch(CONFIG.API_URL+"?action=click",{mode:"no-cors",keepalive:true})}catch(e){} } });
+});
+
+/* ============ PIXEL ART ============ */
+const PAL={H:"#141414",h:"#3B3B3B",S:"#F2C9A0",s:"#D9A47A",Y:"#C9A227",G:"#1C1C24",L:"#5E6170",M:"#B5654A",
+  T:"#2A2220",t:"#171210",K:"#121212",R:"#E0262B",B:"#6E8CA8",b:"#4E6A86",w:"#F3EFE4",
+  g:"#2E7D4F",n:"#1F5C39",k:"#6B4423",O:"#F35700",o:"#B84300",c:"#C98A4B",W:"#FFFFFF",N:"#0A2762",D:"#4FA3E0"};
+const HIEP=[
+"......HHHHHHHH......",
+".....HHHHHHHHHH.....",
+"....HHHhhHHHHHHH....",
+"....HHHHHHHHHHHH....",
+"....HHSSSSSSSSHH....",
+"....HSSSSSSSSSSH....",
+"....YGGGGYYGGGGY....",
+"....SGLGGSSGLGGS....",
+"....SSGGSSSSGGSS....",
+"....sSSSSSSSSSSs....",
+".....SSSSMMSSSS.....",
+"......sSSSSSSs......",
+".......SSSSSS.......",
+"....TTTTTTTTTTTT....",
+"...TTTTTTTTTTTTTT...",
+"..TTTTTTTTTTTTTTTT..",
+"..TTTtTTTTTTTTtTTT..",
+"..SSTtTTTTTTTTtTSS..",
+"..SSTTTTTTTTTTTTSS..",
+"..SSTTTTTTTTTTTTSS..",
+"..RRTTTTTTTTTTTTSS..",
+"..SSKKKKKKKKKKKKSS..",
+"..SSKKKKKKKKKKKKSS..",
+"....KKKKKKKKKKKK....",
+"....KKKKK..KKKKK....",
+"....SSSS....SSSS....",
+"....SSSS....SSSS....",
+"....sSSs....sSSs....",
+"...BBBBB....BBBBB...",
+"..BBBbBB....BBbBBB..",
+"..wwwwww....wwwwww.."];
+const FACE=HIEP.slice(0,14);
+const PINE=["...g...","..ggg..",".ggggg.","..gng..",".ggggg.","gggnggg","...k...","...k..."];
+const TENT=[".....O.....","....OOO....","...OOoOO...","..OOOoOOO..",".OOOooOOOO.","OOOOooOOOOO"];
+
+function sprite(rows,ox=0,oy=0){
+  let s="";rows.forEach((r,y)=>{[...r].forEach((c,x)=>{if(PAL[c])s+=`<rect x="${x+ox}" y="${y+oy}" width="1.02" height="1.02" fill="${PAL[c]}"/>`})});return s;
+}
+const candles=[{o:44,c:40,h:38,l:46},{o:40,c:42,h:37,l:44},{o:42,c:38,h:35,l:43},{o:38,c:36,h:33,l:40},{o:36,c:39,h:34,l:42},{o:39,c:35,h:32,l:41},{o:35,c:34,h:31,l:37}];
+function drawScene(){
+  let s="";
+  // mặt đất lá thông
+  s+=`<rect x="0" y="58" width="64" height="4" fill="#E9D9C4"/><rect x="0" y="58" width="64" height="1" fill="#C98A4B"/>`;
+  // bong bóng mơ: rừng thông + lều
+  s+=`<rect x="31" y="2" width="31" height="23" fill="#0A2762"/><rect x="32" y="3" width="29" height="21" fill="#DDF0FF"/>`;
+  s+=`<rect x="32" y="20" width="29" height="4" fill="#C98A4B"/>`;
+  s+=sprite(PINE,33,12)+sprite(PINE,52,12)+sprite(PINE,44,9);
+  s+=sprite(TENT,40,14);
+  s+=`<rect x="35" y="5" width="2" height="2" fill="#FFB628"/>`;
+  s+=`<rect x="28" y="24" width="2" height="2" fill="#0A2762"/><rect x="25" y="27" width="1" height="1" fill="#0A2762"/>`;
+  // bảng nến
+  s+=`<rect x="31" y="31" width="31" height="23" fill="#0A2762"/><rect x="32" y="32" width="29" height="21" fill="#10306F"/>`;
+  s+=`<rect x="45" y="54" width="2" height="4" fill="#0A2762"/><rect x="41" y="57" width="10" height="1" fill="#0A2762"/>`;
+  candles.forEach((k,i)=>{
+    const x=34+i*4, up=k.c<k.o, col=up?"#14A05A":"#E0262B", top=Math.min(k.o,k.c), bot=Math.max(k.o,k.c);
+    s+=`<rect id="wk${i}" x="${x+.5}" y="${k.h}" width="1" height="${k.l-k.h}" fill="${col}"/>`;
+    s+=`<rect x="${x}" y="${top}" width="2" height="${Math.max(bot-top,1)}" fill="${col}"/>`;
+  });
+  // Hiệp
+  s+=`<g id="hiep">${sprite(HIEP,4,27)}</g>`;
+  // giọt mồ hôi
+  s+=`<rect class="sweat-drop" x="22" y="30" width="1" height="2" fill="#4FA3E0"/><rect class="sweat-drop d2" x="3" y="32" width="1" height="2" fill="#4FA3E0"/>`;
+  $("#scene").innerHTML=s;
+}
+drawScene();
+$("#runner").innerHTML=sprite(HIEP.filter((_,i)=>i%2===0).map(r=>r.replace(/(.)./g,"$1")),0,0);
+$("#toastFace").innerHTML=sprite(FACE,0,0);
+
+/* ============ LỜI THOẠI & TỈA NẾN ============ */
+const LINES=["Mở giúp tôi 1 tài khoản thôi.","Rừng thông đang đợi tôi.","Lãi margin 0đ cho 100 triệu đầu, có thể lệ đàng hoàng nha.",
+  "2 phút thôi, nhanh hơn tôi pha cà phê.","Sếp ơi, tôi đang cố!","Tôi tỉa nến được, nhưng không tỉa được KPI.","Mỗi tài khoản là một cây thông."];
+let li=0;const speech=$("#speech");
+setInterval(()=>{li=(li+1)%LINES.length;speech.textContent=LINES[li]},4500);
+
+const TRIM_LINES=["Xoẹt! Gọn chưa?","Râu nến dài quá, tôi tỉa giúp.","Tỉa nến là đam mê, KPI là trách nhiệm.","Đủ rồi, giờ anh chị mở tài khoản đi 🙏"];
+let trims=0;
+$("#scene").addEventListener("click",e=>{
+  const i=trims%candles.length, k=candles[i], w=document.getElementById("wk"+i);
+  const top=Math.min(k.o,k.c), bot=Math.max(k.o,k.c);
+  w.setAttribute("y",top);w.setAttribute("height",Math.max(bot-top,1));
+  const st=$("#stage"), r=st.getBoundingClientRect(), sv=$("#scene").getBoundingClientRect();
+  const p=document.createElement("div");p.className="snip";p.textContent="✂ TỈA!";
+  p.style.left=((34+i*4)/64*sv.width + sv.left - r.left - 10)+"px";p.style.top=((k.h-4)/62*sv.height + sv.top - r.top)+"px";
+  st.appendChild(p);setTimeout(()=>p.remove(),900);
+  speech.textContent=TRIM_LINES[Math.min(Math.floor(trims/2),TRIM_LINES.length-1)];
+  trims++;
+  if(trims%candles.length===0)setTimeout(drawScene,1200);
+});
+
+function party(){
+  const st=$("#stage");st.classList.remove("idle","sweat");st.classList.add("party");
+  const hero=$(".hero");
+  for(let i=0;i<40;i++){const c=document.createElement("div");c.className="confetti";
+    c.style.left=Math.random()*100+"%";c.style.background=["#F35700","#0A2762","#FFB628","#14A05A"][i%4];
+    c.style.animationDelay=(Math.random()*.6)+"s";hero.appendChild(c);setTimeout(()=>c.remove(),3000)}
+  speech.textContent="Aaaa cảm ơn anh chị! Thêm một cây thông!";
+  setTimeout(()=>{st.classList.remove("party");st.classList.add("idle")},4000);
+}
+
+/* ============ CỘT MỐC KPI ============ */
+const MS=[[0,"Đơn nghỉ phép nằm im trong ngăn kéo"],[250,"Sếp chịu mở đơn ra đọc"],[500,"Sếp gật đầu, chưa ký"],[750,"Tôi bắt đầu đi chợ mua thịt"],[1000,"Xách lều vào rừng thông ⛺"]];
+function renderMilestones(opened,target){
+  const scale=target/1000;
+  $("#milestones").innerHTML="";
+  MS.forEach(([v,t])=>{const d=document.createElement("div");const th=Math.round(v*scale);
+    d.className="ms"+(opened!=null&&opened>=th&&(v>0||opened>0)?" done":"");
+    const b=document.createElement("b");b.textContent=fmt(th);d.appendChild(b);d.appendChild(document.createTextNode(t));$("#milestones").appendChild(d)});
+}
+
+/* ============ DỮ LIỆU ============ */
+function renderStats(s){
+  countUp($("#sVisits"),s.visits);countUp($("#sLeads"),s.leads);countUp($("#sOpenReq"),s.openRequests);countUp($("#sDraws"),s.draws);if(s.shares!=null)$("#sShares").textContent=fmt(s.shares);$("#cafeCount").textContent="Đã pha: "+fmt(s.brews)+" ly";
+  const target=s.target||CONFIG.TARGET, opened=s.opened;
+  $("#sTarget").textContent=fmt(target);countUp($("#sOpened"),opened);
+  $("#openedNote").textContent=s.openedUpdated?("Tôi cập nhật tay từ báo cáo, lần gần nhất: "+s.openedUpdated+"."):"Tôi cập nhật tay từ báo cáo của SHS.";
+  const pct=Math.min((opened||0)/target,1)*100;
+  $("#barFill").style.width=pct+"%";$("#runner").style.left=pct+"%";
+  $("#miniFill").style.width=pct+"%";$("#miniTxt").textContent=fmt(opened||0)+"/"+fmt(target);
+  renderMilestones(opened,target);
+  const st=$("#stage");if(pct<10&&!st.classList.contains("party"))st.classList.add("sweat");else st.classList.remove("sweat");
+  renderWall(s.wall||[]);
+}
+function renderWall(list){
+  const box=$("#wallList");box.innerHTML="";
+  if(!list.length){box.innerHTML='<div class="empty box"><span class="px">TƯỜNG CÒN TRỐNG</span>Người đầu tiên được ghi tên ở đây và được tôi nhớ ơn hết quý.</div>';return}
+  list.forEach(f=>{
+    const d=document.createElement("div");d.className="fan box";
+    const n=document.createElement("div");n.className="n";n.textContent="🌲 "+f.n;d.appendChild(n);
+    const c=document.createElement("div");c.className="c";c.textContent=[f.c,ago(f.t)].filter(Boolean).join(" · ");d.appendChild(c);
+    box.appendChild(d);
+  });
+}
+async function loadStats(){
+  if(!CONFIG.API_URL){$("#offline").style.display="block";renderStats({visits:null,leads:null,openRequests:null,draws:null,opened:null,target:CONFIG.TARGET,wall:[]});
+    $("#wallList").innerHTML='<div class="empty box"><span class="px">CHƯA NỐI DỮ LIỆU</span>Dán API_URL vào CONFIG để hiện số thật.</div>';return}
+  const action="visit";   // mỗi lần mở/tải lại trang đều tính 1 lượt ghé
+  const ctrl=new AbortController();const tm=setTimeout(()=>ctrl.abort(),10000);
+  try{
+    const r=await fetch(CONFIG.API_URL+"?action="+action,{signal:ctrl.signal});const s=await r.json();clearTimeout(tm);
+    if(s.ok)renderStats(s);else throw 0;
+  }catch(e){clearTimeout(tm);$("#wallList").innerHTML='<div class="empty box"><span class="px">MẠNG HƠI LAG</span>Chưa tải được số liệu. Anh chị tải lại trang giúp tôi nhé.</div>'}
+}
+loadStats();
+
+/* ============ ĐIỀU KHOẢN ============ */
+$("#tVer").textContent=CONFIG.TERMS_VERSION;$("#tKeep").textContent=CONFIG.KEEP_DATA;$("#tContact").textContent=CONFIG.CONTACT;
+if(!/^\[/.test(CONFIG.KEEP_DATA))$("#tKeep").classList.remove("fill-me");
+if(!/^\[/.test(CONFIG.CONTACT))$("#tContact").classList.remove("fill-me");
+const terms=$("#terms");
+$("#openTerms").addEventListener("click",e=>{e.preventDefault();terms.classList.add("show")});
+$("#closeTerms").addEventListener("click",()=>terms.classList.remove("show"));
+$("#acceptTerms").addEventListener("click",()=>{$("#fConsent").checked=true;terms.classList.remove("show")});
+terms.addEventListener("click",e=>{if(e.target===terms)terms.classList.remove("show")});
+
+/* ============ FORM ============ */
+const t0=Date.now();
+function normPhone(p){p=(p||"").replace(/[^\d+]/g,"");if(p.startsWith("+84"))p="0"+p.slice(3);else if(p.startsWith("84")&&p.length===11)p="0"+p.slice(2);return p}
+$("#leadForm").addEventListener("submit",async e=>{
+  e.preventDefault();const err=$("#fErr");err.textContent="";
+  const d={name:$("#fName").value.trim(),phone:normPhone($("#fPhone").value),city:$("#fCity").value.trim(),message:$("#fMsg").value.trim(),
+    gender:(document.querySelector('input[name=fGender]:checked')||{}).value||"Khác",coffee:chosenCoffee||"",wantOpen:$("#fWant").checked,showName:$("#fShow").checked,consent:$("#fConsent").checked,consentVersion:CONFIG.TERMS_VERSION,hp:$("#fWeb").value,elapsed:Date.now()-t0};
+  if(d.name.length<2)return err.textContent="Anh chị cho tôi xin họ tên nhé.";
+  if(!/^0(3|5|7|8|9)\d{8}$/.test(d.phone))return err.textContent="Số điện thoại chưa đúng, tôi gọi không được mất.";
+  if(!d.consent)return err.textContent="Anh chị tick đồng ý Điều khoản giúp tôi nhé.";
+  if(!CONFIG.API_URL)return err.textContent="Trang đang ở chế độ xem thử, chưa gửi được.";
+  const b=$("#fBtn");b.disabled=true;b.textContent="Đang gửi…";
+  try{
+    const r=await fetch(CONFIG.API_URL,{method:"POST",body:JSON.stringify(d)});const s=await r.json();
+    if(!s.ok)throw new Error(s.msg||"Lỗi");
+    $("#leadForm").style.display="none";$("#okBox").style.display="block";
+    if(s.stats)renderStats(s.stats);
+    party();showThanks(d,s);USED.lead=true;setVIP();
+  }catch(x){err.textContent=x.message&&x.message!=="Failed to fetch"?x.message:"Gửi chưa được, anh chị thử lại giúp tôi.";b.disabled=false;b.textContent="Gửi cho Hiệp ⛺"}
+});
+
+/* ============ POPUP CẢM ƠN ============ */
+$("#thFace").innerHTML=sprite(FACE,0,0);
+function showThanks(d,s){
+  const x=d.gender==="Nam"?"anh":d.gender==="Nữ"?"chị":"bạn", X=x.charAt(0).toUpperCase()+x.slice(1);
+  const parts=d.name.trim().split(/\s+/), given=parts[parts.length-1];
+  const nm=given.charAt(0).toUpperCase()+given.slice(1).toLowerCase();
+  const QUIPS=[
+    `Đơn nghỉ phép của tôi vừa nhích thêm 1 milimet về phía bàn Sếp. Công đầu thuộc về ${x}.`,
+    `Một cây thông trong rừng vừa được đặt theo tên ${x}. Hôm nào cắm trại, tôi sẽ ngồi đúng dưới gốc đó.`,
+    `Sếp chưa ký đơn, nhưng đã bớt nhíu mày một chút. Cảm ơn ${x} nhiều!`,
+    `Tôi vừa nhảy một điệu ăn mừng ngay tại bàn làm việc. May là chưa ai trong phòng nhìn thấy.`,
+    `Ấm cà phê pha tay ở rừng thông vừa nóng thêm 1 độ. Nhờ ${x} cả đấy.`];
+  $("#thTitle").textContent=s.dup?`${X} ${nm} quay lại kìa!`:`Cảm ơn ${x} ${nm}!`;
+  $("#thQuip").textContent=s.dup?`Số này có trong danh sách của tôi rồi, tôi vẫn nhớ ${x} mà. Tôi sẽ liên hệ sớm.`:QUIPS[Math.floor(Math.random()*QUIPS.length)];
+  $("#thAlias").textContent=s.wallName||"(đang cập nhật)";$("#thAliasLbl").textContent="Trên Tường cảm ơn, "+x+" là:";
+  if(d.coffee)$("#thNote").textContent="Ly "+d.coffee+" của "+x+" đã vào sổ, gặp nhau tôi pha. Tôi hoặc chuyên viên SHS sẽ gọi lại sớm.";
+  $("#thanks").classList.add("show");
+}
+$("#thClose").addEventListener("click",()=>$("#thanks").classList.remove("show"));
+$("#thTarot").addEventListener("click",()=>$("#thanks").classList.remove("show"));
+$("#thanks").addEventListener("click",e=>{if(e.target.id==="thanks")$("#thanks").classList.remove("show")});
+
+/* ============ MỞ KHÓA (VIP) ============ */
+const TAROT_FREE=5;
+const isVIP=()=>{try{return localStorage.getItem("htn_vip")==="1"}catch(e){return false}};
+function setVIP(){try{localStorage.setItem("htn_vip","1")}catch(e){}refreshLimits()}
+function tarotUsed(){try{const v=JSON.parse(localStorage.getItem("htn_tarot_n")||"null");if(v&&v.d===vnNow().date)return v.n}catch(e){}return 0}
+function tarotLeft(){return isVIP()?Infinity:Math.max(TAROT_FREE-tarotUsed(),0)}
+function tarotUse(){try{localStorage.setItem("htn_tarot_n",JSON.stringify({d:vnNow().date,n:tarotUsed()+1}))}catch(e){}refreshLimits()}
+function refreshLimits(){
+  const l=tarotLeft(),el=$("#tLeft");
+  if(isVIP()){const t=$("#tLock");if(t)t.classList.remove("show")}
+  if(el)el.textContent=l===Infinity?"♾️ Tarot vô tận đã mở khóa":"🎴 Còn "+l+"/"+TAROT_FREE+" lượt hôm nay";
+  if(typeof renderMenu==="function")renderMenu();
+  const cn=$("#cupNext");if(cn)cn.textContent=isVIP()?"Bạn đã mở khóa cà phê không giới hạn. Chọn ly khác ở menu phía trên để pha tiếp.":"Barista nghiệp dư cần nghỉ tay. Mỗi người 1 ly/ngày. Muốn uống tiếp thì để lại thông tin để mở khóa nhé.";
+}
+function lockBox(id,title,text){
+  const b=$(id);b.innerHTML="";const h=document.createElement("b");h.textContent=title;const p=document.createElement("p");p.textContent=text;
+  const r=document.createElement("div");r.className="cta-row";r.style.marginTop="12px";
+  r.innerHTML='<a class="btn primary" href="#join">✍️ Để lại thông tin để mở khóa</a><a class="btn" target="_blank" rel="noopener">Mở tài khoản</a>';
+  r.children[1].href=CONFIG.OPEN_URL;b.append(h,p,r);b.classList.add("show");
+}
+
+/* ============ QUẦY CÀ PHÊ ============ */
+let chosenCoffee="";
+const CUPS={
+SMALL:["..s..s......","...s..s.....","............",".NNNNNNNN...",".NFFFFFFN...",".NCCCCCCNNN.",".NCCCCCCN.N.",".NCCCCCCNNN.","..NCCCCN....","NNNNNNNNNN.."],
+MUG:["...s...s........","....s...s.......","................",".NNNNNNNNNNN....",".NFFFFFFFFFN....",".NCCCCCCCCCNNN..",".NCCCCCCCCCN.N..",".NCCCCCCCCCN.N..",".NCCCCCCCCCNNN..",".NCCCCCCCCCN....","..NCCCCCCCN.....","...NNNNNNN......","NNNNNNNNNNNNN..."],
+GLASS:["..........O...",".........O....",".GGGGGGGGOGGG.",".G.......O..G.",".GFFFFFFFFFFG.",".GCCCCWCCCCCG.",".GCCWWCCCCWCG.",".GCCWWCCCWWCG.",".GCCCCCCCWWCG.",".GCCCCCWWCCCG.","..GCCCCWWCCG..","..GCCCCCCCCG..","..GCCCCCCCCG..","..GCCCCCCCCG..","...GGGGGGGG..."],
+V60:["..NNNNNNNNNNNN..","..NWWWWWWWWWWN..","...NWWWWWWWWN...","....NFFFFFFN....",".....NFFFFN.....","...NNNNNNNNNN...",".......CC.......","...GGGGGGGGGG...","..G..........G..",".G............GG",".GCCCCCCCCCCCG.G",".GCCCCCCCCCCCG.G",".GCCCCCCCCCCCGGG","..GCCCCCCCCCG...","...GGGGGGGGG...."],
+SGLASS:["..............","..............","..............","..............","..............","..GGGGGGGGGG..","..GFFFFFFFFG..","..GCCWCCCCCG..","..GCWWCCCWCG..","..GCCCCCWWCG..","...GCCWCCCG...","...GCCCCCCG...","...GCCCCCCG...","...GGGGGGGG...","...GGGGGGGG..."],
+LGLASS:["...........YYYY.","..........YyyyyY",".GGGGGGGG.YyyyyY",".G.........YyyY.",".GFFFFFFFFFFYY..",".GCCCCWCCCCCG...",".GCCWWCCCCWCG...",".GCCWWCCCWWCG...",".GCCCCCCCWWCG...",".GCCCCCWWCCCG...","..GCCCCWWCCG....","..GCCCCCCCCG....","..GCCCCCCCCG....","..GCCCCCCCCG....","...GGGGGGGG....."],
+MYST:["....NNNN....","...NN..NN...","........NN..",".......NN...","......NN....",".....NN.....",".....NN.....","............",".....NN.....",".....NN....."]};
+const DRINKS=[
+{n:"Espresso",cup:"SMALL",c:"#3B2314",f:"#C68B4E",style:"Lướt sóng",q:"Bạn vào lệnh như rút shot: 25 giây là xong, không ngồi nghĩ lại.",
+ steps:["Cân 18g hạt rang đậm. Cân điện tử, không cân cảm xúc.","Xay thật mịn, mịn như cách bạn bấm lệnh.","Nén tamper cho phẳng. Lệch 1mm là lệch cả shot.","Chiết xuất 25–30 giây. Đừng chớp mắt, sắp xong rồi."]},
+{n:"Americano đá",cup:"GLASS",c:"#3B2314",f:"#5A3A22",style:"Cân bằng",q:"Thích đậm nhưng phải mát đầu. Danh mục có tăng trưởng, thêm đá cho bình tĩnh.",
+ steps:["Xay 18g hạt cho 1 shot espresso.","Cho đá vào ly, thêm khoảng 120ml nước lạnh.","Chiết xuất shot espresso khoảng 30 giây.","Rót shot lên đá. Mát lạnh, cân bằng, uống được cả buổi chiều."]},
+{n:"Pour over",cup:"V60",c:"#6B3A1E",f:"#7A4626",style:"Đầu tư giá trị",q:"Rót từng vòng, đợi từng giọt. Bạn chậm, đều, và mê nghiên cứu.",
+ steps:["Cân 15g hạt, xay vừa như đường cát.","Đun nước 92–96°C. Nóng quá là đắng, y như mua đuổi.","Rót ít nước cho cà phê nở 30–45 giây. Kiên nhẫn đi bạn.","Rót vòng tròn chậm rãi tới 240ml, tỉ lệ khoảng 1:16.","Chờ giọt cuối. Ngoài đời 3 phút, ở đây 2 giây."]},
+{n:"Bạc xỉu nhiều sữa",cup:"GLASS",c:"#E3C49B",f:"#FFFFFF",style:"Phòng thủ",q:"Thích vị cà phê nhưng sợ đắng. Rủi ro phải vừa miệng mới chịu.",
+ steps:["Pha một chút cà phê phin. Đúng, chỉ một chút thôi.","Cho sữa đặc. Nhiều. Nhiều nữa.","Thêm sữa tươi cho mềm vị.","Cho đá, khuấy đều. Đắng 5%, ngọt 95%."]},
+{n:"Matcha kem ngậy",cup:"GLASS",c:"#7FB069",f:"#FFF3D6",style:"Đi ngược đám đông",q:"Vào quán cà phê mà gọi matcha. Cả phòng mua thì bạn đứng nhìn.",
+ steps:["Rây 2–3g bột matcha cho khỏi vón cục.","Thêm nước khoảng 80°C. Nước sôi là matcha đắng ngay.","Đánh chasen theo hình chữ W tới khi sủi bọt mịn. Tay mỏi hơn ngồi canh bảng điện.","Rót sữa lạnh và đá.","Phủ lớp kem béo. Phần thưởng cho người đi đường riêng."]},
+{n:"Nâu đá",cup:"GLASS",c:"#9A6B45",f:"#B98A5E",style:"Bluechip",q:"Gu quốc dân, ai uống cũng hợp. Ngủ ngon mỗi tối.",
+ steps:["Cho khoảng 20g cà phê xay vào phin, lắc nhẹ cho phẳng.","Rót ít nước sôi, ủ 30 giây cho bột nở.","Rót đầy, đậy nắp, chờ nhỏ giọt. Chậm mà chắc.","Khuấy với sữa đặc, đổ vào ly đá. Ly quốc dân xong rồi."]},
+{n:"Đen đá không đường",cup:"SGLASS",c:"#24140B",f:"#3B2314",style:"Kỷ luật thép",q:"Đắng vẫn uống, uống xong tỉnh cả buổi. Cắt lỗ không chớp mắt.",
+ steps:["Cho 20g cà phê vào phin. Không sữa, không đường, không thỏa hiệp.","Ủ ít nước sôi 30 giây.","Rót đầy, chờ từng giọt đen nhánh.","Đổ thẳng vào ly đá. Đắng đúng như kế hoạch."]},
+{n:"Coldbrew Chanh vàng",cup:"LGLASS",c:"#5A3418",f:"#6B4423",style:"Dài hạn",q:"Ngâm cả đêm mới uống, thêm lát chanh cho tươi. Mua xong để đó, thỉnh thoảng nhìn lại cho vui.",
+ steps:["Xay thô 100g hạt, ngâm với 1 lít nước lạnh.","Ủ 12–18 tiếng trong tủ lạnh. Tua nhanh, vì bạn giỏi chờ chứ tôi thì không.","Lọc bã. Vắt nửa quả chanh vàng, thêm chút syrup.","Cho đá, rót coldbrew, cài lát chanh lên miệng ly. Chua nhẹ, tỉnh cả buổi."]},
+{n:"Cà phê trứng",cup:"MUG",c:"#3B2314",f:"#F5D68A",style:"Phân tích kỹ",q:"Cầu kỳ, phải đánh tay. Đọc hết báo cáo mới chịu xuống tiền.",
+ steps:["Tách lòng đỏ trứng gà.","Đánh lòng đỏ với sữa đặc tới khi bông mịn. Tay ra cơ bắp.","Pha một phin cà phê nóng.","Phủ kem trứng lên, đặt ly vào bát nước nóng giữ nhiệt."]},
+{n:"Trà đá",cup:"GLASS",c:"#C98A2E",f:"#D69A3C",style:"Ghé chơi",mystery:true,q:"Bạn chỉ ghé chơi. Không sao, mở tài khoản vẫn được.",
+ steps:["Mở ấm trà.","Rót trà.","Thêm đá.","Xong. Ly dễ pha nhất trong sự nghiệp barista của tôi."]}];
+function cupSVG(k,c,f){
+  const rows=CUPS[k],pal={N:"#0A2762",G:"#7FA3C8",W:"#EAF5FF",O:"#F35700",s:"#B9C2D3",Y:"#E8B923",y:"#FFF0A0",C:c,F:f};
+  let o="";rows.forEach((r,y)=>[...r].forEach((ch,x)=>{if(pal[ch])o+=`<rect class="${ch==="s"?"steam":""}" x="${x}" y="${y}" width="1.02" height="1.02" fill="${pal[ch]}"/>`}));
+  return `<svg viewBox="0 0 ${rows[0].length} ${rows.length}" shape-rendering="crispEdges">${o}</svg>`;
+}
+const vnNow=()=>{const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Ho_Chi_Minh",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",hour12:false}).formatToParts(new Date());
+  const g=t=>(p.find(x=>x.type===t)||{}).value;return {date:g("year")+"-"+g("month")+"-"+g("day"),hour:parseInt(g("hour"),10)%24}};
+const isOpen=()=>{const h=vnNow().hour;return h>=9&&h<17};
+const CLOSED_EARLY=["Barista chưa ngủ dậy. Pha cà phê là sở thích, không phải nghề chính, nên quầy chỉ mở từ 9h. Hẹn bạn lúc 9h nhé.",
+  "Quầy chưa mở. Máy xay còn đang ngủ, tôi cũng vậy. 9h quay lại nhé."];
+const CLOSED_LATE=["Quầy đóng lúc 17h rồi. Barista nghiệp dư cũng cần tan ca như ai. Mai 9h tôi đứng quầy lại.",
+  "Giờ này uống cà phê là mất ngủ, mà 9h sáng mai thị trường mở cửa rồi. Hẹn bạn 9h–17h ngày mai.",
+  "Quầy đóng cửa. Tôi đang rửa phin. Mai quay lại trong giờ hành chính nhé."];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+function cafeSaved(){try{const v=JSON.parse(localStorage.getItem("htn_cafe")||"null");if(v&&v.d===vnNow().date)return v}catch(e){}return null}
+function note(t){const n=$("#cafeNote");n.textContent=t;n.classList.add("show")}
+function renderMenu(){
+  const m=$("#menu");m.innerHTML="";const open=isOpen();
+  $("#cafeStatus").textContent=open?"Đang mở quầy":"Đóng cửa";$("#cafeStatus").className=open?"open":"closed";
+  m.classList.toggle("locked",!open||(!!cafeSaved()&&!isVIP()));
+  DRINKS.forEach((d,i)=>{const b=document.createElement("button");b.className="drink";b.type="button";
+    b.innerHTML=d.mystery?cupSVG("MYST","#000","#000")+"<b>Ly bí ẩn</b>":cupSVG(d.cup,d.c,d.f)+"<b></b>";
+    if(!d.mystery)b.querySelector("b").textContent=d.n;
+    b.addEventListener("click",()=>order(i));m.appendChild(b)});
+}
+let brewing=false;
+function order(i){
+  if(brewing)return;
+  const h=vnNow().hour;
+  if(!isOpen()){note(h<9?pick(CLOSED_EARLY):pick(CLOSED_LATE));return}
+  const sv=cafeSaved();
+  if(sv&&!isVIP()){lockBox("#cafeNote","Hôm nay bạn uống ly "+DRINKS[sv.i].n+" rồi.","Barista nghiệp dư chỉ pha miễn phí 1 ly/ngày cho khách vãng lai. Để lại thông tin mở tài khoản, trở thành khách hàng là mở khóa cà phê không giới hạn cùng Hiệp Tỉa Nến.");return}
+  brew(i);
+}
+function brew(i){
+  brewing=true;USED.cafe=true;const d=DRINKS[i];$("#cafeNote").classList.remove("show");$("#cupRes").classList.remove("show");
+  try{localStorage.setItem("htn_cafe",JSON.stringify({d:vnNow().date,i}))}catch(e){}
+  if(CONFIG.API_URL){try{fetch(CONFIG.API_URL+"?action=brew").then(r=>r.json()).then(s=>{if(s.ok)renderStats(s)}).catch(()=>{})}catch(e){}}
+  $("#brewName").textContent=d.mystery?"Ly bí ẩn":d.n;$("#brewBox").classList.add("show");
+  $("#brewBox").scrollIntoView({behavior:"smooth",block:"center"});
+  const T=10000,n=d.steps.length,t0=performance.now();let last=-1;
+  (function tick(t){
+    const k=Math.min((t-t0)/T,1),si=Math.min(Math.floor(k*n),n-1);
+    if(si!==last){last=si;$("#brewStep").textContent=d.steps[si];$("#brewIdx").textContent="Bước "+(si+1)+"/"+n}
+    $("#brewFill").style.width=(k*100)+"%";$("#brewPct").textContent=Math.round(k*100)+"%";
+    if(k<1)requestAnimationFrame(tick);else setTimeout(()=>{$("#brewBox").classList.remove("show");brewing=false;renderMenu();showCup(i,true)},400);
+  })(t0);
+}
+function showCup(i,fresh){
+  const d=DRINKS[i];$("#cupArt").innerHTML=cupSVG(d.cup,d.c,d.f);
+  $("#cupName").textContent=d.n;$("#cupStyle").textContent="Phong cách: "+d.style;$("#cupSay").textContent="“"+d.q+"”";
+  $("#cupRes").classList.add("show");$("#cupRes").dataset.i=i;
+  if(fresh){$("#cupRes").scrollIntoView({behavior:"smooth",block:"center"});party()}
+}
+$("#cupReg").addEventListener("click",()=>{
+  const d=DRINKS[+$("#cupRes").dataset.i];chosenCoffee=d.n;
+  $("#coffeeChipTxt").textContent="Ly đã chọn: "+d.n;$("#coffeeChip").classList.add("show");
+  $("#join").scrollIntoView({behavior:"smooth"});setTimeout(()=>$("#fName").focus({preventScroll:true}),700);
+});
+$("#coffeeChipX").addEventListener("click",()=>{chosenCoffee="";$("#coffeeChip").classList.remove("show")});
+renderMenu();
+(function(){const sv=cafeSaved();if(sv)showCup(sv.i)})();
+setInterval(renderMenu,60000);
+
+/* ============ TAROT ============ */
+const ICON={
+CHAT:["NNNNNNNNNNNN","NNNNONNNONNN","NNNNONNNONNN","NNNNONNNONNN","NNNNONNNONNN","NNNNNNNNNNNN","NNNNONNNONNN","NNNNNNNNNNNN",".NNN........",".NN.........",".N.........."],
+HAT:[".....N......","....NNN.....","....NYN.....","...NNNNN....","...NNYNN....","..NNNNNNN...","..NNNNNNN...",".NNNNNNNNN..","OOOOOOOOOOOO","OOOOOOOOOOOO"],
+STOP:["...RRRRRR...","..RRRRRRRR..",".RRRRRRRRRR.","RRRRRRRRRRRR","RRRRRRRRRRRR","RWWWWWWWWWWR","RWWWWWWWWWWR","RRRRRRRRRRRR","RRRRRRRRRRRR",".RRRRRRRRRR.","..RRRRRRRR..","...RRRRRR..."],
+CROWN:["Y....Y....Y.","YY..YYY..YY.","YYY.YYY.YYY.","YYYYYYYYYYY.","YYYRYYYOYYY.","YYYYYYYYYYY.","YYYYYYYYYYY."],
+WAVE:["....DDD.....","...DDDDD....","..DDWWDDD...","..DD..DDDD..",".......DDD..","D......DDDD.","DD....DDDDDD","DDDDDDDDDDDD","NNNNNNNNNNNN","NNNNNNNNNNNN"],
+DOC:["..NNNNNNNN..","..NWWWWWWN..","..NWNNNNWN..","..NWWWWWWN..","..NWNNNNWN..","..NWWWWWWN..","..NWNNNWWN..","..NWWWWWWN..","..NWOOOOWN..","..NWWWWWWN..","..NNNNNNNN.."],
+WHEEL:["....NNNN....","..NN.NN.NN..",".N...NN...N.",".NN..NN..NN.","N..NNNNNN..N","NNNNNOONNNNN","NNNNNOONNNNN","N..NNNNNN..N",".NN..NN..NN.",".N...NN...N.","..NN.NN.NN..","....NNNN...."],
+TOWER:["......Y.....",".....YY.....","....NYNN....","....NYNN....","....NNNN....","....NONN....","....NNNN....","...NNNNNN...","...NNONNN...","...NNNNNN...","..NNNNNNNN..","OOOOOOOOOOOO"],
+STAR:[".....YY.....",".....YY.....","....YYYY....","YYYYYYYYYYYY",".YYYYYYYYYY.","..YYYYYYYY..","...YYYYYY...","..YYYYYYYY..","..YYY..YYY..",".YYY....YYY.",".YY......YY."],
+MOON:["....YYYY..N.","..YYYY......",".YYYY.......",".YYY.....N..","YYYY........","YYYY........","YYYY........","YYYY.....N..",".YYY........",".YYYY.......","..YYYY......","....YYYY...."],
+SUN:[".....O......",".O...O...O..","..O.YYY.O...","...YYYYY....","..YYYYYYY...","OOYYYYYYYOO.","..YYYYYYY...","...YYYYY....","..O.YYY.O...",".O...O...O..",".....O......"],
+GLOBE:["...NNNNNN...","..NDDgDDDN..",".NDggggDDDN.","NDDggDDDggDN","NDDDgDDDgggN","NDDDDDDggggN","NDggDDDDggDN","NDgggDDDDDDN",".NDggDDDDDN.","..NDDDDDDN..","...NNNNNN..."],
+FACE:FACE};
+const TAROT=[
+{r:"I",n:"Gã Khờ FOMO",i:"CHAT",j:"Thấy cả nhóm chat mua, tay bạn ngứa không chịu nổi.",t:"Đọc xong rồi hẵng bấm lệnh. Nhóm chat không gánh lỗ hộ bạn."},
+{r:"II",n:"Pháp Sư Đòn Bẩy",i:"HAT",j:"Bạn biết phép nhân đôi. Nhân đôi cả chiều lỗ.",t:"Dùng margin vừa sức chịu đựng, đừng vừa sức tưởng tượng."},
+{r:"III",n:"Nữ Tư Tế Cắt Lỗ",i:"STOP",j:"Bạn đặt stop-loss rất chuẩn. Rồi tự tay gỡ ra.",t:"Kỷ luật đặt ra để làm theo, nhất là lúc khó chịu."},
+{r:"IV",n:"Hoàng Đế Ôm Dài",i:"CROWN",j:"Bạn ôm cổ phiếu lâu hơn ôm người yêu cũ.",t:"Kiên nhẫn là tốt, miễn là vẫn còn lý do để giữ."},
+{r:"V",n:"Cỗ Xe Lướt Sóng",i:"WAVE",j:"Ngày 8 lệnh, tay mỏi trước tài khoản.",t:"Tính cả phí và thuế khi đếm lãi lỗ."},
+{r:"VI",n:"Ẩn Sĩ Đọc BCTC",i:"DOC",j:"2 giờ sáng bạn vẫn ngồi đọc thuyết minh báo cáo tài chính.",t:"Cứ đọc tiếp, nhưng nhớ đi ngủ. Thị trường mở cửa lúc 9 giờ."},
+{r:"VII",n:"Bánh Xe Thị Trường",i:"WHEEL",j:"Lên rồi xuống, xuống rồi lên. Bạn vẫn ngồi đó, mắt đỏ hoe.",t:"Không ai bắt đáy chuẩn mãi được. Chia nhỏ điểm mua."},
+{r:"VIII",n:"Tòa Tháp Tất Tay",i:"TOWER",j:"Cả tài khoản của bạn dồn vào đúng 1 mã.",t:"Chia trứng ra nhiều giỏ, giỏ nào rơi vẫn còn bữa sáng."},
+{r:"IX",n:"Ngôi Sao Tích Sản",i:"STAR",j:"Tháng nào cũng mua đều, bình thản như đang thiền.",t:"Đều đặn là lợi thế lớn của nhà đầu tư cá nhân."},
+{r:"X",n:"Mặt Trăng Tin Đồn",i:"MOON",j:"Nguồn tin của bạn: anh họ của bạn của sếp.",t:"Kiểm chứng trước khi tin. Giao dịch bằng tin nội bộ còn phạm luật."},
+{r:"XI",n:"Mặt Trời Cổ Tức",i:"SUN",j:"Mùa chốt quyền là mùa bạn cười nhiều nhất.",t:"Cổ tức không cố định như lãi tiết kiệm. Xem kỹ sức khỏe doanh nghiệp."},
+{r:"XII",n:"Thế Giới Đa Dạng",i:"GLOBE",j:"Danh mục của bạn có đủ cả HOSE, HNX lẫn UPCoM.",t:"Đa dạng hóa có chủ đích, không phải mua cho đủ bộ sưu tập."}];
+const SECRET={r:"★",n:"Hiệp Tỉa Nến",i:"FACE",rare:true,j:"Bạn bốc trúng lá hiếm nhất bộ bài. Vũ trụ nói bạn sắp mở tài khoản chứng khoán.",t:"Lá này không có lời khuyên. Chỉ có cái nút ngay bên dưới."};
+const iconSVG=k=>{const r=ICON[k];return `<svg viewBox="0 0 ${r[0].length} ${r.length}" shape-rendering="crispEdges">${sprite(r)}</svg>`};
+const BACK=(()=>{let s='<rect width="20" height="30" fill="#0A2762"/><rect x="1" y="1" width="18" height="28" fill="none" stroke="#F35700" stroke-width=".6"/>';
+  [[4,4],[15,6],[3,15],[16,17],[6,23],[14,24]].forEach(([x,y])=>s+=`<rect x="${x}" y="${y}" width="1" height="1" fill="#FFB628"/>`);
+  s+='<rect x="9.5" y="6" width="1" height="4" fill="#fff"/><rect x="8" y="10" width="4" height="8" fill="#14A05A"/><rect x="9.5" y="18" width="1" height="3" fill="#fff"/>';
+  return `<svg viewBox="0 0 20 30" shape-rendering="crispEdges">${s}</svg>`})();
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()};
+const deck=$("#deck");let drawn=null;
+function cardOf(id){return id<0?SECRET:TAROT[id]}
+function buildDeck(saved){
+  deck.innerHTML="";
+  for(let i=0;i<12;i++){
+    const c=document.createElement("div");c.className="tc";c.style.animationDelay=(i*45)+"ms";
+    c.innerHTML=`<div class="in"><div class="face back">${BACK}<span>HIỆP TỈA NẾN</span></div><div class="face front"></div></div>`;
+    c.addEventListener("click",()=>draw(c,i));deck.appendChild(c);
+  }
+  if(saved){const c=deck.children[saved.pos];fillFront(c,cardOf(saved.id));c.classList.add("flip");deck.classList.add("done");showReading(cardOf(saved.id),true)}
+}
+function fillFront(c,k){c.querySelector(".front").innerHTML=`<i>${k.r}</i>${iconSVG(k.i)}<b></b>`;c.querySelector(".front b").textContent=k.n}
+function draw(c,pos){
+  USED.tarot=true;
+  if(deck.classList.contains("done"))return;
+  if(tarotLeft()<=0){tarotLock();return}
+  tarotUse();
+  const id=Math.random()<1/30?-1:Math.floor(Math.random()*TAROT.length), k=cardOf(id);
+  fillFront(c,k);c.classList.add("flip");deck.classList.add("done");
+  if(CONFIG.API_URL){try{fetch(CONFIG.API_URL+"?action=draw").then(r=>r.json()).then(s=>{if(s.ok)renderStats(s)}).catch(()=>{})}catch(e){}}
+  setTimeout(()=>{showReading(k,false);if(k.rare)party()},750);
+}
+function showReading(k,old){
+  drawn=k;const b=$("#bigCard");b.innerHTML=`<i>${k.r}</i>${iconSVG(k.i)}<b></b>`;b.querySelector("b").textContent=k.n;
+  b.classList.toggle("rare",!!k.rare);
+  $("#rKicker").textContent=k.rare?"LÁ ẨN · TỈ LỆ 1/30":(old?"LÁ BÀI HÔM NAY CỦA BẠN":"LÁ BÀI CỦA BẠN");
+  $("#rName").textContent=k.n;$("#rSay").textContent="“"+k.j+"”";$("#rTip").textContent=k.t;
+  const r=$("#reading");r.classList.add("show");if(!old)r.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+buildDeck(null);
+function tarotLock(){lockBox("#tLock","Hết "+TAROT_FREE+" lượt bốc miễn phí hôm nay rồi.","Vũ trụ chỉ phát "+TAROT_FREE+" lá/ngày cho khách vãng lai. Để lại thông tin mở tài khoản, trở thành khách hàng là mở khóa Tarot vô tận.");$("#tLock").scrollIntoView({behavior:"smooth",block:"center"})}
+$("#redraw").addEventListener("click",()=>{if(tarotLeft()<=0){tarotLock();return}$("#reading").classList.remove("show");deck.classList.remove("done");buildDeck(null);deck.scrollIntoView({behavior:"smooth",block:"center"})});
+
+function wrapText(ctx,text,x,y,maxW,lh){
+  const words=text.split(" ");let line="";
+  for(const w of words){const t=line?line+" "+w:w;if(ctx.measureText(t).width>maxW&&line){ctx.fillText(line,x,y);y+=lh;line=w}else line=t}
+  if(line){ctx.fillText(line,x,y);y+=lh}return y;
+}
+async function cardPNG(k){
+  try{await document.fonts.ready}catch(e){}
+  const W=720,H=1080,cv=document.createElement("canvas");cv.width=W;cv.height=H;const x=cv.getContext("2d");
+  x.fillStyle="#0A2762";x.fillRect(0,0,W,H);x.fillStyle="#FFF6EC";x.fillRect(28,28,W-56,H-56);
+  x.strokeStyle="#F35700";x.lineWidth=6;x.strokeRect(46,46,W-92,H-92);
+  x.textAlign="center";x.fillStyle="#F35700";x.font="900 40px Inter, Arial";x.fillText(k.r,W/2,118);
+  const rows=ICON[k.i],cw=rows[0].length,ch=rows.length,sc=Math.floor(Math.min(320/cw,300/ch)),ox=(W-cw*sc)/2,oy=150+(300-ch*sc)/2;
+  rows.forEach((r,yy)=>[...r].forEach((c,xx)=>{if(PAL[c]){x.fillStyle=PAL[c];x.fillRect(ox+xx*sc,oy+yy*sc,sc+.5,sc+.5)}}));
+  x.fillStyle="#0A2762";x.font="900 54px Inter, Arial";x.fillText(k.n,W/2,540);
+  x.fillStyle="#F35700";x.font="italic 700 32px Inter, Arial";let y=wrapText(x,"“"+k.j+"”",W/2,610,580,46);
+  x.fillStyle="#2B3550";x.font="500 27px Inter, Arial";wrapText(x,"Lời khuyên thật: "+k.t,W/2,y+30,580,40);
+  x.fillStyle="#0A2762";x.font="800 24px Inter, Arial";x.fillText("Hiệp Tỉa Nến · bói vui, đừng tin",W/2,H-80);
+  return cv.toDataURL("image/png");
+}
+$("#saveCard").addEventListener("click",async()=>{if(!drawn)return;const u=await cardPNG(drawn);$("#saveImg").src=u;$("#saveDl").href=u;$("#saveModal").classList.add("show")});
+$("#saveClose").addEventListener("click",()=>$("#saveModal").classList.remove("show"));
+$("#saveModal").addEventListener("click",e=>{if(e.target.id==="saveModal")$("#saveModal").classList.remove("show")});
+
+/* ============ ĐIỀU HƯỚNG ============ */
+const burger=$("#burger"),mnav=$("#mnav");
+function closeMenu(){mnav.classList.remove("show");burger.setAttribute("aria-expanded","false");burger.setAttribute("aria-label","Mở menu")}
+function placeMenu(){const b=document.querySelector(".top").getBoundingClientRect().bottom;mnav.style.top=Math.max(b,0)+"px";mnav.style.maxHeight="calc(100vh - "+Math.max(b,0)+"px)"}
+window.addEventListener("scroll",()=>{if(mnav.classList.contains("show"))placeMenu()},{passive:true});
+burger.addEventListener("click",e=>{e.stopPropagation();placeMenu();const o=!mnav.classList.contains("show");mnav.classList.toggle("show",o);burger.setAttribute("aria-expanded",o);burger.setAttribute("aria-label",o?"Đóng menu":"Mở menu")});
+mnav.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+document.addEventListener("click",e=>{if(mnav.classList.contains("show")&&!mnav.contains(e.target))closeMenu()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+// Tô sáng mục đang xem
+const navLinks=[...document.querySelectorAll(".nav a,.mnav a")];
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const id="#"+en.target.id;navLinks.forEach(a=>a.classList.toggle("on",a.getAttribute("href")===id))}}),{rootMargin:"-45% 0px -50% 0px"});
+  ["tarot","cafe","kpi","why","wall","join","faq"].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el)});
+}
+
+refreshLimits();
+
+/* ============ CÚP PIXEL ============ */
+const TROPHY=["..YYYYYYYY..","YYYWYYYYYYYY","Y.YWYYYYYY.Y","Y.YWYYYYYY.Y",".YYYYYYYYYY.","...YYYYYY...","....YYYY....",".....YY.....",".....YY.....","....YYYY....","...NNNNNN...","...NOOOON...","...NNNNNN..."];
+document.querySelectorAll(".trophy").forEach(t=>{
+  const pal={Y:t.dataset.c||"#FFB628",W:"#FFF6D8",N:"#0A2762",O:"#F35700"};let o="";
+  TROPHY.forEach((r,y)=>[...r].forEach((ch,x)=>{if(pal[ch])o+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${pal[ch]}"/>`}));
+  o+='<rect class="steam" x="0" y="0" width="1" height="1" fill="#FFB628"/><rect class="steam" x="11" y="5" width="1" height="1" fill="#FFB628"/>';
+  t.innerHTML=`<svg viewBox="0 0 12 13" shape-rendering="crispEdges">${o}</svg>`;
+});
+
+/* ============ CHIA SẺ ============ */
+$("#shareFace").innerHTML=sprite(FACE,0,0);
+const SITE=()=>location.href.split("#")[0];
+function shareText(ctx){
+  if(ctx==="tarot"&&drawn)return `Tôi vừa bốc trúng lá "${drawn.n}" ở trang của Hiệp Tỉa Nến 😂 Bốc thử xem bạn là nhà đầu tư kiểu gì:`;
+  const ci=$("#cupRes").dataset.i;
+  if(ctx==="cafe"&&ci!=null&&ci!=="")return `Barista Hiệp vừa pha cho tôi ly ${DRINKS[+ci].n}, phán tôi thuộc phe "${DRINKS[+ci].style}" ☕ Bạn uống gì?`;
+  return "Giúp Hiệp Tỉa Nến đủ 100 tài khoản SHS để Sếp ký đơn nghỉ phép đi cắm trại ⛺ Có cả bốc Tarot và pha cà phê:";
+}
+function countShare(){if(CONFIG.API_URL){try{fetch(CONFIG.API_URL+"?action=share").then(r=>r.json()).then(s=>{if(s.ok)renderStats(s)}).catch(()=>{})}catch(e){}}}
+async function doShare(ctx){
+  USED.share=true;const text=shareText(ctx),url=SITE();
+  if(navigator.share){try{await navigator.share({title:document.title,text,url});countShare();return}catch(e){if(e&&e.name==="AbortError")return}}
+  $("#shText").textContent=text;$("#shLink").value=url;
+  $("#shFb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
+  $("#shareModal").classList.add("show");
+}
+document.querySelectorAll(".js-share").forEach(b=>b.addEventListener("click",()=>doShare(b.dataset.ctx)));
+$("#shFb").addEventListener("click",countShare);
+$("#shCopy").addEventListener("click",async()=>{
+  const v=$("#shText").textContent+" "+$("#shLink").value;
+  try{await navigator.clipboard.writeText(v);$("#shCopy").textContent="✅ Đã sao chép. Dán vào Zalo thôi!";countShare()}
+  catch(e){$("#shLink").select();$("#shCopy").textContent="Nhấn giữ ô link bên dưới để sao chép"}
+});
+$("#shClose").addEventListener("click",()=>$("#shareModal").classList.remove("show"));
+$("#shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")$("#shareModal").classList.remove("show")});
+
+/* ============ TOAST: KHOAN ĐÃ + NHẮC KHÉO KHI Ở LÂU ============ */
+const toast=$("#toast");let toastTimer=null;
+function showToast(t,p,cta,act){
+  $("#toastT").textContent=t;$("#toastP").textContent=p;const c=$("#toastCta");
+  if(cta){c.textContent=cta;c.style.display="inline-block";c.onclick=e=>{e.preventDefault();toast.classList.remove("show");act()}}else c.style.display="none";
+  toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),10000);
+}
+$("#toastX").addEventListener("click",()=>toast.classList.remove("show"));
+const go=id=>()=>document.getElementById(id).scrollIntoView({behavior:"smooth"});
+let exitShown=false;
+document.addEventListener("mouseout",e=>{if(!e.relatedTarget&&e.clientY<8&&!exitShown){exitShown=true;
+  showToast("Khoan đã anh chị ơi!","Anh chị về là rừng thông buồn lắm. 2 phút thôi mà.","Mở tài khoản",()=>window.open(CONFIG.OPEN_URL,"_blank","noopener"))}});
+
+const NUDGES=[
+ {ok:()=>!USED.tarot,t:"Lướt nãy giờ chưa bốc bài à?",p:"12 lá Tarot đang úp sẵn, chờ bạn lật. Không mất phí, không mất tài khoản.",cta:"🔮 Bốc 1 lá",act:go("tarot")},
+ {ok:()=>!USED.cafe&&isOpen()&&!cafeSaved(),t:"Đọc lâu thế, chắc khát rồi.",p:"Barista Hiệp đang rảnh tay. 10 giây là có ly, kèm luôn lời phán phong cách đầu tư.",cta:"☕ Pha 1 ly",act:go("cafe")},
+ {ok:()=>!USED.lead,t:"Bạn ở đây lâu hơn thời gian mở tài khoản rồi đấy.",p:"Mở tài khoản chỉ mất 2 phút. Bạn đã đọc tới phút thứ mấy rồi?",cta:"Mở trong 2 phút",act:()=>window.open(CONFIG.OPEN_URL,"_blank","noopener")},
+ {ok:()=>!USED.share,t:"Sếp vừa hỏi KPI tới đâu rồi.",p:"Tôi bảo đang có người đọc trang rất chăm. Gửi trang cho 1 người bạn để tôi có thêm chuyện báo cáo nhé.",cta:"📣 Chia sẻ",act:()=>doShare("page")},
+ {ok:()=>true,t:"Vẫn còn đây à? Cảm động quá.",p:"Bạn là một trong những người đọc lâu nhất hôm nay (theo cảm nhận cá nhân, không có số liệu).",cta:"Ghé Tường cảm ơn",act:go("wall")}
+];
+const AT=[45,120,210,320,450];let secs=0,ni=0;
+setInterval(()=>{
+  if(document.hidden)return;secs++;
+  if(ni>=AT.length||secs<AT[ni])return;
+  const busy=document.querySelector(".modal.show")||toast.classList.contains("show")||brewing||["INPUT","TEXTAREA"].includes((document.activeElement||{}).tagName);
+  if(busy){AT[ni]=secs+15;return}
+  const n=NUDGES.find((x,i)=>!x.used&&x.ok());ni++;
+  if(n){n.used=true;showToast(n.t,n.p,n.cta,n.act)}
+},1000);
+</script>
+</body>
+</html>
