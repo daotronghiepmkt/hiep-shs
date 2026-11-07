@@ -1115,9 +1115,15 @@ const vnNow=()=>{const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Ho_Chi_
 const isOpen=()=>{const h=vnNow().hour;return h>=9&&h<17};
 const CLOSED_EARLY=["Barista chưa ngủ dậy. Pha cà phê là sở thích, không phải nghề chính, nên quầy chỉ mở từ 9h. Hẹn bạn lúc 9h nhé.",
   "Quầy chưa mở. Máy xay còn đang ngủ, tôi cũng vậy. 9h quay lại nhé."];
-const CLOSED_LATE=["Quầy đóng lúc 17h rồi. Barista nghiệp dư cũng cần tan ca như ai. Mai 9h tôi đứng quầy lại.",
-  "Giờ này uống cà phê là mất ngủ, mà 9h sáng mai thị trường mở cửa rồi. Hẹn bạn 9h–17h ngày mai.",
-  "Quầy đóng cửa. Tôi đang rửa phin. Mai quay lại trong giờ hành chính nhé."];
+// Thị trường chứng khoán VN giao dịch thứ 2 – thứ 6; quầy cà phê mở cả tuần 9h–17h
+const vnWeekday=()=>["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Ho_Chi_Minh",weekday:"short"}).format(new Date()));
+function closedLate(){
+  const tmr=(vnWeekday()+1)%7, marketTmr=tmr>=1&&tmr<=5;
+  return ["Quầy đóng lúc 17h rồi. Barista nghiệp dư cũng cần tan ca như ai. Mai 9h tôi đứng quầy lại.",
+    marketTmr?"Giờ này uống cà phê là mất ngủ, mà 9h sáng mai thị trường mở cửa rồi. Hẹn bạn 9h–17h ngày mai."
+             :"Giờ này uống cà phê là mất ngủ. Mai cuối tuần thị trường nghỉ, nhưng quầy của tôi vẫn mở 9h–17h. Hẹn bạn ngày mai.",
+    "Quầy đóng cửa. Tôi đang rửa phin. Mai quay lại trong khung 9h–17h nhé."];
+}
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 function cafeSaved(){try{const v=JSON.parse(localStorage.getItem("htn_cafe")||"null");if(v&&v.d===vnNow().date)return v}catch(e){}return null}
 function note(t){const n=$("#cafeNote");n.textContent=t;n.classList.add("show")}
@@ -1134,7 +1140,7 @@ let brewing=false;
 function order(i){
   if(brewing)return;
   const h=vnNow().hour;
-  if(!isOpen()){note(h<9?pick(CLOSED_EARLY):pick(CLOSED_LATE));return}
+  if(!isOpen()){note(h<9?pick(CLOSED_EARLY):pick(closedLate()));return}
   const sv=cafeSaved();
   if(sv&&!isVIP()){lockBox("#cafeNote","Hôm nay bạn uống ly "+DRINKS[sv.i].n+" rồi.","Barista nghiệp dư chỉ pha miễn phí 1 ly/ngày cho khách vãng lai. Để lại thông tin mở tài khoản, trở thành khách hàng là mở khóa cà phê không giới hạn cùng Hiệp Tỉa Nến.");return}
   brew(i);
